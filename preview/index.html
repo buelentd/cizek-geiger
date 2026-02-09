@@ -1,216 +1,310 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de-DE" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <title>Geiger & Cizek – Heizung, Sanitär & Klimatechnik Straubing</title>
-    <meta name="description" content="Ihr Meisterbetrieb für Heizung, Sanitär und Klimatechnik in Straubing. Wärmepumpen, Kaminöfen, Badsanierung – mit 10 Jahren Funktionsgarantie. Jetzt beraten lassen!">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Ihr Meisterbetrieb für Heizung, Sanitär und Klimatechnik in Straubing. Wärmepumpen, Kaminöfen, Badsanierung – mit 10 Jahren Funktionsgarantie.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @font-face{font-display:swap;font-family:Montserrat Font;font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format("woff2")}
+        @font-face{font-display:swap;font-family:Montserrat Font;font-style:normal;font-weight:600;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format("woff2")}
+        @font-face{font-display:swap;font-family:Montserrat Font;font-style:normal;font-weight:700;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format("woff2")}
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Montserrat Font, -apple-system, sans-serif; font-size: 1rem; color: #192430; line-height: 1.6; }
+        img { max-width: 100%; height: auto; }
+        
+        /* Header */
+        .Header { background: rgba(255,255,255,0.95); backdrop-filter: blur(49px); position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 97%; z-index: 1000; padding: 10px 40px; display: flex; justify-content: space-between; align-items: center; border-radius: 0 0 30px 30px; }
+        .Header-logo { height: 80px; }
+        .Header-nav { display: flex; gap: 15px; align-items: center; }
+        .Header-navlink { color: #000; font-weight: 600; text-transform: uppercase; font-size: 1.1rem; text-decoration: none; }
+        .Header-navlink:hover { color: #E30613; }
+        .Header-btnlink { background: #E30613; color: #fff; padding: 15px 25px; border-radius: 35px; text-transform: uppercase; font-weight: 600; text-decoration: none; }
+        .Header-btnlink:hover { background: #FFD500; color: #192430; }
+        
+        /* Hero */
+        .Headerimage { position: relative; height: 60vh; min-height: 500px; margin: 150px auto 100px; width: 97%; overflow: hidden; border-radius: 40px; }
+        .Headerimage img { width: 100%; height: 100%; object-fit: cover; }
+        .Headerimage-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.3); }
+        .Headerimage-content { position: absolute; bottom: 20px; left: 50px; z-index: 3; color: #fff; max-width: 800px; }
+        .cmsText-2xl { font-size: 1.5rem; line-height: 1.3; }
+        .cmsText-4xl { font-size: 2.625rem; font-weight: 700; line-height: 1.1; text-transform: uppercase; }
+        .cmsText-3xl { font-size: 2rem; font-weight: 700; }
+        .cmsText-lg { font-size: 1.125rem; font-weight: 600; text-transform: uppercase; }
+        .uppercase { text-transform: uppercase; }
+        .text-white { color: #fff; }
+        
+        /* Container */
+        .containerbig { max-width: 1700px; margin: 0 auto; padding: 0 50px; }
+        
+        /* Image-Text Section */
+        .ImageTextBaseElement { padding: 100px 0; }
+        .ImageTextBaseElement-holder { display: flex; justify-content: space-between; align-items: center; gap: 50px; }
+        .ImageTextBaseElement-content { width: 45%; }
+        .ImageTextBaseElement-imageholder { width: 50%; }
+        .ImageTextBaseElement-image { border-radius: 40px; width: 100%; }
+        
+        /* CTA Button */
+        .cta-darkwitharrow { background: #192430; color: #fff; padding: 20px 80px 20px 40px; border-radius: 33px; text-decoration: none; display: inline-block; font-weight: 600; position: relative; min-width: 200px; }
+        .cta-darkwitharrow:hover { background: #fff; color: #192430; }
+        
+        /* Leistungen Grid */
+        .TeaserSliderBaseElement { background: #F5F5F5; padding: 100px 0; }
+        .TeaserSliderBaseElement-head { text-align: center; margin-bottom: 50px; }
+        .TeaserSliderBaseElement-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+        .TeaserSliderBaseElement-card { background: #fff; border-radius: 40px; padding: 40px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .TeaserSliderBaseElement-card:hover { transform: translateY(-10px); box-shadow: 0 8px 20px rgba(227,6,19,0.2); }
+        .TeaserSliderBaseElement-icon { font-size: 48px; margin-bottom: 20px; }
+        .TeaserSliderBaseElement-card h4 { color: #E30613; font-size: 1.5rem; margin: 20px 0 10px; }
+        .TeaserSliderBaseElement-card a { color: #E30613; text-decoration: none; font-weight: 600; }
+        
+        /* USPs */
+        .ImageIconsBaseElement { padding: 80px 0; }
+        .ImageIconsBaseElement-icons { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
+        .ImageIconsBaseElement-iconcontent { display: flex; gap: 20px; align-items: flex-start; }
+        .ImageIconsBaseElement-icon { width: 60px; height: 60px; color: #FFD500; font-size: 48px; }
+        
+        /* Stats */
+        .CountBaseElement { background: #1A1A1A; color: #fff; padding: 80px 0; }
+        .CountBaseElement-counters { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; text-align: center; }
+        .CountBaseElement-number { font-size: 3rem; font-weight: 700; color: #FFD500; }
+        .CountBaseElement-headline { font-size: 1rem; text-transform: uppercase; margin-top: 10px; }
+        
+        /* CTA Section */
+        .BackgroundimageTextoverlayBaseElement { background: #E30613; color: #fff; padding: 80px 0; text-align: center; }
+        .BackgroundimageTextoverlayBaseElement h2 { font-size: 2.625rem; margin-bottom: 20px; }
+        .BackgroundimageTextoverlayBaseElement .cta-whitewitharrow { background: #fff; color: #192430; padding: 20px 40px; border-radius: 33px; text-decoration: none; display: inline-block; font-weight: 600; margin-top: 20px; }
+        .BackgroundimageTextoverlayBaseElement .cta-whitewitharrow:hover { background: #FFD500; }
+        
+        /* Footer */
+        .Footer { background: #F5F5F5; padding: 50px 0; margin-top: 100px; }
+        .Footermain-flex { display: flex; justify-content: space-between; max-width: 1700px; margin: 0 auto; padding: 0 50px; }
+        .Footermain-content { width: 60%; }
+        .Footermain-nav { margin-top: 20px; }
+        .Footermain-navlink { color: #192430; text-decoration: none; margin-right: 10px; }
+        
+        /* Responsive */
+        @media (max-width: 1000px) {
+            .ImageTextBaseElement-holder { flex-direction: column; }
+            .ImageTextBaseElement-content, .ImageTextBaseElement-imageholder { width: 100%; }
+            .TeaserSliderBaseElement-grid { grid-template-columns: repeat(2, 1fr); }
+            .CountBaseElement-counters { grid-template-columns: repeat(2, 1fr); }
+            .ImageIconsBaseElement-icons { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 600px) {
+            .Header { padding: 10px 20px; }
+            .Header-logo { height: 60px; }
+            .Header-nav { display: none; }
+            .TeaserSliderBaseElement-grid { grid-template-columns: 1fr; }
+            .CountBaseElement-counters { grid-template-columns: 1fr; }
+            .cmsText-4xl { font-size: 1.8rem; }
+            .cmsText-2xl { font-size: 1.18rem; }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header & Navigation -->
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <a href="index.html" class="logo">Geiger & Cizek</a>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="heizungsbau.html" class="nav-link">Heizungsbau</a></li>
-                    <li><a href="kaminoefen.html" class="nav-link">Kaminöfen</a></li>
-                    <li><a href="badsanierung.html" class="nav-link">Badsanierung</a></li>
-                    <li><a href="klimaanlage.html" class="nav-link">Klimaanlage</a></li>
-                    <li><a href="ueber-uns.html" class="nav-link">Über uns</a></li>
-                </ul>
-            </nav>
-        </div>
+    <!-- Header -->
+    <header class="Header">
+        <a href="index.html" class="Header-homelink">
+            <svg class="Header-logo" width="200" height="80" viewBox="0 0 200 80">
+                <text x="10" y="50" font-family="Montserrat Font" font-size="32" font-weight="700" fill="#E30613">G&C</text>
+            </svg>
+        </a>
+        <nav class="Header-nav">
+            <a href="heizungsbau.html" class="Header-navlink">Heizungsbau</a>
+            <a href="kaminoefen.html" class="Header-navlink">Kaminöfen</a>
+            <a href="badsanierung.html" class="Header-navlink">Badsanierung</a>
+            <a href="klimaanlage.html" class="Header-navlink">Klimaanlage</a>
+            <a href="ueber-uns.html" class="Header-navlink">Über uns</a>
+            <a href="#kontakt" class="Header-btnlink">Beratung vereinbaren</a>
+        </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Wir schaffen Wärme, die bleibt – heute und in Zukunft</h1>
-            <p>Ihr zuverlässiger Partner für Heizung, Sanitär und Klimatechnik in Straubing und Umgebung.</p>
-            <a href="#kontakt" class="btn btn-primary">Jetzt Beratung vereinbaren</a>
+    <!-- Hero -->
+    <div class="Headerimage">
+        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1920&h=1000&fit=crop" alt="Moderne Heizung">
+        <div class="Headerimage-overlay"></div>
+        <div class="Headerimage-content">
+            <h1><span class="cmsText-2xl text-white">Wir schaffen Wärme, die bleibt – heute und in Zukunft</span></h1>
+            <h2><span class="cmsText-4xl text-white">Geiger & Cizek</span></h2>
+            <p class="cmsText-2xl text-white">Ihr zuverlässiger Partner für Heizung, Sanitär und Klimatechnik in Straubing und Umgebung.</p>
         </div>
-    </section>
+    </div>
 
     <!-- Wer wir sind -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Zwei Meister. Ein Team. Ihre Zukunft.</h2>
-            <p class="section-text">
-                Mit Karl Geiger und Florian Cizek haben Sie es mit zwei erfahrenen Meistern im Bereich Heizung, Lüftung und Sanitär zu tun. Unterstützt von einem motivierten, hochqualifizierten Team sorgen wir für Lösungen, die überzeugen – in Straubing, Landshut, München, Passau und Umgebung.<br><br>
-                Unser Anspruch: Beratung mit System. Wir hören zu, planen mit Ihnen und setzen professionell um – sauber, effizient und transparent.
-            </p>
-        </div>
-    </section>
-
-    <!-- Unsere Leistungen -->
-    <section class="section section-gray">
-        <div class="container">
-            <h2 class="section-title">Alles aus einer Hand – von der Heizung bis zur Klimaanlage</h2>
-            <div class="grid grid-3">
-                <div class="card">
-                    <div class="card-icon">🔥</div>
-                    <h3>Heizungsbau</h3>
-                    <p>Moderne Heizsysteme für Straubing, Regensburg, Deggendorf und Bogen – von der Wärmepumpe bis zur klassischen Gasheizung.</p>
-                    <a href="heizungsbau.html" class="card-link">Mehr erfahren →</a>
+    <div class="ImageTextBaseElement">
+        <div class="containerbig">
+            <div class="ImageTextBaseElement-holder">
+                <div class="ImageTextBaseElement-content typography">
+                    <h3><span class="uppercase"><strong><span class="cmsText-3xl">Zwei Meister. Ein Team. Ihre Zukunft.</span></strong></span></h3>
+                    <p>Mit Karl Geiger und Florian Cizek haben Sie es mit zwei erfahrenen Meistern im Bereich Heizung, Lüftung und Sanitär zu tun. Unterstützt von einem motivierten, hochqualifizierten Team sorgen wir für Lösungen, die überzeugen – in Straubing, Landshut, München, Passau und Umgebung.</p>
+                    <p><strong>Unser Anspruch: Beratung mit System. Wir hören zu, planen mit Ihnen und setzen professionell um – sauber, effizient und transparent.</strong></p>
+                    <p><a href="#kontakt" class="cta-darkwitharrow">Jetzt Beratung vereinbaren</a></p>
                 </div>
-                <div class="card">
-                    <div class="card-icon">🌱</div>
-                    <h3>Wärmepumpe</h3>
-                    <p>Effizient heizen und kühlen mit umweltfreundlicher Technologie – für Ihr Zuhause oder Büro.</p>
-                    <a href="heizungsbau.html#waermepumpe" class="card-link">Mehr erfahren →</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🔥</div>
-                    <h3>Kaminöfen</h3>
-                    <p>Pellet- oder Scheitholz-Kaminöfen in vielen Ausführungen – Wärme, die Sie spüren und sehen.</p>
-                    <a href="kaminoefen.html" class="card-link">Mehr erfahren →</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🚿</div>
-                    <h3>Badsanierung</h3>
-                    <p>Vom ersten Entwurf bis zur fertigen Wohlfühloase – alles aus einer Hand.</p>
-                    <a href="badsanierung.html" class="card-link">Mehr erfahren →</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">💨</div>
-                    <h3>Lüftung & Wasser</h3>
-                    <p>Frische Luft und sauberes Wasser – moderne Lüftungsanlagen und Wasseraufbereitung.</p>
-                    <a href="#lueftung" class="card-link">Mehr erfahren →</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">❄️</div>
-                    <h3>Klimaanlagen</h3>
-                    <p>Split- und Multisplit-Klimaanlagen für perfektes Raumklima – energieeffizient und leise.</p>
-                    <a href="klimaanlage.html" class="card-link">Mehr erfahren →</a>
+                <div class="ImageTextBaseElement-imageholder">
+                    <img class="ImageTextBaseElement-image" src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop" alt="Team Geiger & Cizek">
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Was uns besonders macht -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Warum Geiger & Cizek?</h2>
-            <div class="grid grid-2">
-                <div class="usp-box">
-                    <div class="usp-icon">✓</div>
-                    <div class="usp-content">
+    <!-- Unsere Leistungen -->
+    <div class="TeaserSliderBaseElement">
+        <div class="containerbig">
+            <div class="TeaserSliderBaseElement-head typography">
+                <p class="cmsText-lg">Alles aus einer Hand – von der Heizung bis zur Klimaanlage</p>
+                <h3 class="cmsText-4xl uppercase">Unsere Leistungen im Überblick</h3>
+            </div>
+            <div class="TeaserSliderBaseElement-grid">
+                <div class="TeaserSliderBaseElement-card">
+                    <div class="TeaserSliderBaseElement-icon">🔥</div>
+                    <h4>Heizungsbau</h4>
+                    <p>Moderne Heizsysteme für Straubing, Regensburg, Deggendorf und Bogen – von der Wärmepumpe bis zur klassischen Gasheizung.</p>
+                    <a href="heizungsbau.html">Mehr erfahren →</a>
+                </div>
+                <div class="TeaserSliderBaseElement-card">
+                    <div class="TeaserSliderBaseElement-icon">🔥</div>
+                    <h4>Kaminöfen</h4>
+                    <p>Pellet- oder Scheitholz-Kaminöfen in vielen Ausführungen – Wärme, die Sie spüren und sehen.</p>
+                    <a href="kaminoefen.html">Mehr erfahren →</a>
+                </div>
+                <div class="TeaserSliderBaseElement-card">
+                    <div class="TeaserSliderBaseElement-icon">🚿</div>
+                    <h4>Badsanierung</h4>
+                    <p>Vom ersten Entwurf bis zur fertigen Wohlfühloase – alles aus einer Hand.</p>
+                    <a href="badsanierung.html">Mehr erfahren →</a>
+                </div>
+                <div class="TeaserSliderBaseElement-card">
+                    <div class="TeaserSliderBaseElement-icon">❄️</div>
+                    <h4>Klimaanlagen</h4>
+                    <p>Split- und Multisplit-Klimaanlagen für perfektes Raumklima – energieeffizient und leise.</p>
+                    <a href="klimaanlage.html">Mehr erfahren →</a>
+                </div>
+                <div class="TeaserSliderBaseElement-card">
+                    <div class="TeaserSliderBaseElement-icon">🌱</div>
+                    <h4>Wärmepumpen</h4>
+                    <p>Effizient heizen und kühlen mit umweltfreundlicher Technologie – für Ihr Zuhause oder Büro.</p>
+                    <a href="heizungsbau.html#waermepumpe">Mehr erfahren →</a>
+                </div>
+                <div class="TeaserSliderBaseElement-card">
+                    <div class="TeaserSliderBaseElement-icon">💨</div>
+                    <h4>Lüftung & Wasser</h4>
+                    <p>Frische Luft und sauberes Wasser – moderne Lüftungsanlagen und Wasseraufbereitung.</p>
+                    <a href="#kontakt">Mehr erfahren →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- USPs -->
+    <div class="ImageIconsBaseElement">
+        <div class="containerbig">
+            <h3 class="cmsText-3xl" style="text-align:center; margin-bottom: 50px;">Warum Geiger & Cizek?</h3>
+            <div class="ImageIconsBaseElement-icons">
+                <div class="ImageIconsBaseElement-iconcontent">
+                    <div class="ImageIconsBaseElement-icon">✅</div>
+                    <div>
                         <h4>Meisterbetrieb mit Erfahrung</h4>
                         <p>Zwei erfahrene Meister mit über 15 Jahren Know-how – Sie profitieren von echter Handwerkskunst.</p>
                     </div>
                 </div>
-                <div class="usp-box">
-                    <div class="usp-icon">✓</div>
-                    <div class="usp-content">
+                <div class="ImageIconsBaseElement-iconcontent">
+                    <div class="ImageIconsBaseElement-icon">✅</div>
+                    <div>
                         <h4>Alles aus einer Hand</h4>
                         <p>Von der Beratung über die Planung bis zur Installation und Wartung – wir begleiten Sie durchgehend.</p>
                     </div>
                 </div>
-                <div class="usp-box">
-                    <div class="usp-icon">✓</div>
-                    <div class="usp-content">
+                <div class="ImageIconsBaseElement-iconcontent">
+                    <div class="ImageIconsBaseElement-icon">✅</div>
+                    <div>
                         <h4>Regional verwurzelt</h4>
                         <p>Straubing, Landshut, München, Passau – wir sind vor Ort und kennen die Region.</p>
                     </div>
                 </div>
-                <div class="usp-box">
-                    <div class="usp-icon">✓</div>
-                    <div class="usp-content">
+                <div class="ImageIconsBaseElement-iconcontent">
+                    <div class="ImageIconsBaseElement-icon">✅</div>
+                    <div>
                         <h4>10 Jahre Funktionsgarantie</h4>
                         <p>Maximale Sicherheit für Ihre Heizungsanlage – ohne versteckte Kosten.</p>
                     </div>
                 </div>
-                <div class="usp-box">
-                    <div class="usp-icon">✓</div>
-                    <div class="usp-content">
+                <div class="ImageIconsBaseElement-iconcontent">
+                    <div class="ImageIconsBaseElement-icon">✅</div>
+                    <div>
                         <h4>Saubere Arbeit</h4>
                         <p>Nach uns bleibt kein Staub, nur gute Luft – wir achten auf Ordnung und Sauberkeit.</p>
                     </div>
                 </div>
-                <div class="usp-box">
-                    <div class="usp-icon">✓</div>
-                    <div class="usp-content">
+                <div class="ImageIconsBaseElement-iconcontent">
+                    <div class="ImageIconsBaseElement-icon">✅</div>
+                    <div>
                         <h4>Transparente Kosten</h4>
                         <p>Klare Angebote ohne böse Überraschungen – Sie wissen immer, woran Sie sind.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Zahlen & Fakten -->
-    <section class="section section-dark">
-        <div class="container">
-            <h2 class="section-title">Geiger & Cizek in Zahlen</h2>
-            <div class="grid grid-4">
-                <div class="stats">
-                    <span class="stat-number">15+</span>
-                    <span class="stat-label">Jahre Erfahrung</span>
-                    <span class="stat-text">Seit 2010 Ihr zuverlässiger Partner für Heizung, Sanitär und Klimatechnik.</span>
+    <!-- Stats -->
+    <div class="CountBaseElement">
+        <div class="containerbig">
+            <h3 class="cmsText-3xl" style="text-align:center; margin-bottom: 50px;">Geiger & Cizek in Zahlen</h3>
+            <div class="CountBaseElement-counters">
+                <div>
+                    <div class="CountBaseElement-number">15+</div>
+                    <div class="CountBaseElement-headline">Jahre Erfahrung</div>
+                    <p style="font-size: 0.9rem; margin-top: 10px;">Seit 2010 Ihr zuverlässiger Partner für Heizung, Sanitär und Klimatechnik.</p>
                 </div>
-                <div class="stats">
-                    <span class="stat-number">1.200+</span>
-                    <span class="stat-label">Zufriedene Kunden</span>
-                    <span class="stat-text">Ihre Zufriedenheit ist unser Maßstab – in Straubing und Umgebung.</span>
+                <div>
+                    <div class="CountBaseElement-number">1.200+</div>
+                    <div class="CountBaseElement-headline">Zufriedene Kunden</div>
+                    <p style="font-size: 0.9rem; margin-top: 10px;">Ihre Zufriedenheit ist unser Maßstab – in Straubing und Umgebung.</p>
                 </div>
-                <div class="stats">
-                    <span class="stat-number">48h</span>
-                    <span class="stat-label">Reaktionszeit</span>
-                    <span class="stat-text">Ihre Anfrage ist unser Anliegen – wir antworten in maximal zwei Tagen.</span>
+                <div>
+                    <div class="CountBaseElement-number">48h</div>
+                    <div class="CountBaseElement-headline">Reaktionszeit</div>
+                    <p style="font-size: 0.9rem; margin-top: 10px;">Ihre Anfrage ist unser Anliegen – wir antworten in maximal zwei Tagen.</p>
                 </div>
-                <div class="stats">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Transparenz</span>
-                    <span class="stat-text">Klare Angebote, ehrliche Kommunikation, keine versteckten Kosten.</span>
+                <div>
+                    <div class="CountBaseElement-number">100%</div>
+                    <div class="CountBaseElement-headline">Transparenz</div>
+                    <p style="font-size: 0.9rem; margin-top: 10px;">Klare Angebote, ehrliche Kommunikation, keine versteckten Kosten.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- CTA Section -->
-    <section class="section section-red cta-section" id="kontakt">
-        <div class="container">
-            <h2>Bereit für Ihr nächstes Projekt?</h2>
-            <p>Egal ob Heizungsbau, Kaminöfen oder eine komplette Badsanierung – wir finden stets die beste Lösung für Ihre Immobilie.</p>
-            <div class="cta-buttons">
-                <a href="#kontakt" class="btn btn-secondary">Zum Kontaktformular</a>
-            </div>
-            <p><strong>oder rufen Sie uns an:</strong></p>
-            <a href="tel:+4994218610588" class="phone-link">09421 / 861 05 88</a>
+    <!-- CTA -->
+    <div class="BackgroundimageTextoverlayBaseElement" id="kontakt">
+        <div class="containerbig">
+            <h2 class="cmsText-4xl">Bereit für Ihr nächstes Projekt?</h2>
+            <p style="font-size: 1.2rem; margin: 20px 0;">Egal ob Heizungsbau, Kaminöfen oder eine komplette Badsanierung – wir finden stets die beste Lösung für Ihre Immobilie.</p>
+            <a href="tel:+4994218610588" class="cta-whitewitharrow">09421 / 861 05 88</a>
+            <a href="mailto:info@geiger-cizek.de" class="cta-whitewitharrow">E-Mail schreiben</a>
         </div>
-    </section>
+    </div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div>
-                    <h4>Geiger & Cizek</h4>
-                    <p>Ihr Meisterbetrieb für Heizung, Sanitär und Klimatechnik in Straubing und Umgebung.</p>
+    <footer class="Footer">
+        <div class="Footermain">
+            <div class="Footermain-flex">
+                <div class="Footermain-content">
+                    <p><strong>Geiger & Cizek GbR</strong><br>
+                    Meisterbetrieb für Heizung, Sanitär und Klimatechnik<br>
+                    Straubing, Bayern</p>
+                    <nav class="Footermain-nav">
+                        <a href="index.html" class="Footermain-navlink">Home</a>
+                        <a href="heizungsbau.html" class="Footermain-navlink">Heizungsbau</a>
+                        <a href="kaminoefen.html" class="Footermain-navlink">Kaminöfen</a>
+                        <a href="badsanierung.html" class="Footermain-navlink">Badsanierung</a>
+                        <a href="klimaanlage.html" class="Footermain-navlink">Klimaanlage</a>
+                        <a href="ueber-uns.html" class="Footermain-navlink">Über uns</a>
+                    </nav>
+                    <p style="margin-top: 20px; font-size: 0.9rem; color: #666;">© 2026 Geiger & Cizek GbR. Alle Rechte vorbehalten.</p>
                 </div>
-                <div>
-                    <h4>Leistungen</h4>
-                    <ul class="footer-links">
-                        <li><a href="heizungsbau.html">Heizungsbau</a></li>
-                        <li><a href="kaminoefen.html">Kaminöfen</a></li>
-                        <li><a href="badsanierung.html">Badsanierung</a></li>
-                        <li><a href="klimaanlage.html">Klimaanlage</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Kontakt</h4>
-                    <ul class="footer-links">
-                        <li>Telefon: 09421 / 861 05 88</li>
-                        <li>Straubing, Bayern</li>
-                        <li><a href="ueber-uns.html">Über uns</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Geiger & Cizek – Meisterbetrieb für Heizung, Sanitär und Klimatechnik</p>
             </div>
         </div>
     </footer>

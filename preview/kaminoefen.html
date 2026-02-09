@@ -1,239 +1,169 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de-DE">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaminöfen Straubing – Pellet & Scheitholz | Geiger & Cizek</title>
-    <meta name="description" content="Kaminöfen für Straubing und Umgebung. Pelletöfen, Scheitholzöfen, wasserführende Systeme – Beratung, Installation, Wartung. Besuchen Sie unsere Ausstellung!">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<title>Kaminöfen Straubing – Pellet & Scheitholz | Geiger & Cizek</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@font-face{font-family:Montserrat Font;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format("woff2")}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Montserrat Font,-apple-system,sans-serif;color:#192430;line-height:1.6}
+.Header{background:rgba(255,255,255,.95);position:fixed;top:0;left:50%;transform:translateX(-50%);width:97%;z-index:1000;padding:10px 40px;display:flex;justify-content:space-between;align-items:center;border-radius:0 0 30px 30px}
+.Header-logo{height:80px}
+.Header-nav{display:flex;gap:15px;align-items:center}
+.Header-navlink{color:#000;font-weight:600;text-transform:uppercase;font-size:1.1rem;text-decoration:none}
+.Header-navlink:hover{color:#E30613}
+.Header-btnlink{background:#E30613;color:#fff;padding:15px 25px;border-radius:35px;text-transform:uppercase;font-weight:600;text-decoration:none}
+.Headerimage{position:relative;height:50vh;min-height:400px;margin:150px auto 100px;width:97%;overflow:hidden;border-radius:40px}
+.Headerimage img{width:100%;height:100%;object-fit:cover}
+.Headerimage-overlay{position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.3)}
+.Headerimage-content{position:absolute;bottom:20px;left:50px;z-index:3;color:#fff;max-width:800px}
+.cmsText-4xl{font-size:2.625rem;font-weight:700;line-height:1.1;text-transform:uppercase}
+.cmsText-3xl{font-size:2rem;font-weight:700}
+.cmsText-2xl{font-size:1.5rem}
+.text-white{color:#fff}
+.containerbig{max-width:1700px;margin:0 auto;padding:0 50px}
+.TextBaseElement{padding:80px 0}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;margin:50px 0}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin:50px 0}
+.card{background:#fff;border:1px solid #ddd;border-radius:40px;padding:40px}
+.card h4{color:#E30613;font-size:1.5rem;margin-bottom:15px}
+.card ul{list-style:none;padding:0;margin:15px 0}
+.card li:before{content:"✅ ";color:#FFD500;margin-right:10px}
+.cta-section{background:#E30613;color:#fff;padding:80px 0;text-align:center}
+.cta-whitewitharrow{background:#fff;color:#192430;padding:20px 40px;border-radius:33px;text-decoration:none;display:inline-block;font-weight:600;margin:10px}
+.Footer{background:#F5F5F5;padding:50px;margin-top:100px}
+@media(max-width:1000px){.grid-2,.grid-3{grid-template-columns:1fr}}
+@media(max-width:600px){.Header-nav{display:none}.cmsText-4xl{font-size:1.8rem}}
+</style>
 </head>
 <body>
-    <!-- Header & Navigation -->
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <a href="index.html" class="logo">Geiger & Cizek</a>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="heizungsbau.html" class="nav-link">Heizungsbau</a></li>
-                    <li><a href="kaminoefen.html" class="nav-link active">Kaminöfen</a></li>
-                    <li><a href="badsanierung.html" class="nav-link">Badsanierung</a></li>
-                    <li><a href="klimaanlage.html" class="nav-link">Klimaanlage</a></li>
-                    <li><a href="ueber-uns.html" class="nav-link">Über uns</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header class="Header">
+<a href="index.html"><svg class="Header-logo" width="200" height="80"><text x="10" y="50" font-family="Montserrat Font" font-size="32" font-weight="700" fill="#E30613">G&C</text></svg></a>
+<nav class="Header-nav">
+<a href="heizungsbau.html" class="Header-navlink">Heizungsbau</a>
+<a href="kaminoefen.html" class="Header-navlink" style="color:#E30613">Kaminöfen</a>
+<a href="badsanierung.html" class="Header-navlink">Badsanierung</a>
+<a href="klimaanlage.html" class="Header-navlink">Klimaanlage</a>
+<a href="ueber-uns.html" class="Header-navlink">Über uns</a>
+<a href="#kontakt" class="Header-btnlink">Beratung vereinbaren</a>
+</nav>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Wärme, die Sie sehen und spüren</h1>
-            <p>Kaminöfen für Pellets und Scheitholz – gemütliches Ambiente und nachhaltige Wärme für Ihr Zuhause.</p>
-            <a href="#kontakt" class="btn btn-primary">Beratungstermin vereinbaren</a>
-        </div>
-    </section>
+<div class="Headerimage">
+<img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=1920&h=800&fit=crop" alt="Kaminofen">
+<div class="Headerimage-overlay"></div>
+<div class="Headerimage-content">
+<h1 class="cmsText-4xl text-white">Wärme, die Sie sehen und spüren</h1>
+<p class="cmsText-2xl text-white">Kaminöfen für Pellets und Scheitholz – gemütliches Ambiente und nachhaltige Wärme für Ihr Zuhause.</p>
+</div>
+</div>
 
-    <!-- Intro -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Mehr als nur eine Wärmequelle</h2>
-            <p class="section-text">
-                Ein Kaminofen schafft Atmosphäre, Gemütlichkeit und Unabhängigkeit. Ob als Hauptheizung oder zusätzliche Wärmequelle – moderne Kaminöfen verbinden Effizienz mit authentischem Feuererlebnis.<br><br>
-                Wir bieten Ihnen eine große Auswahl an Pellet- und Scheitholzöfen – von klassisch bis modern, von kompakt bis raumgreifend.
-            </p>
-            
-            <div class="grid grid-2" style="margin-top: 3rem;">
-                <div class="usp-box">
-                    <div class="usp-icon">🌱</div>
-                    <div class="usp-content">
-                        <h4>Nachhaltig & klimaneutral</h4>
-                        <p>Heizen mit nachwachsenden Rohstoffen – CO₂-neutral und umweltfreundlich.</p>
-                    </div>
-                </div>
-                <div class="usp-box">
-                    <div class="usp-icon">💰</div>
-                    <div class="usp-content">
-                        <h4>Kosteneffizient</h4>
-                        <p>Unabhängig von fossilen Brennstoffen – langfristig günstigere Heizkosten.</p>
-                    </div>
-                </div>
-                <div class="usp-box">
-                    <div class="usp-icon">🏠</div>
-                    <div class="usp-content">
-                        <h4>Wertsteigerung</h4>
-                        <p>Ein Kaminofen erhöht den Wert Ihrer Immobilie und schafft Wohlfühlatmosphäre.</p>
-                    </div>
-                </div>
-                <div class="usp-box">
-                    <div class="usp-icon">🔥</div>
-                    <div class="usp-content">
-                        <h4>Gemütliches Flammenspiel</h4>
-                        <p>Erleben Sie echtes Feuer – für entspannte Abende und wohlige Wärme.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="TextBaseElement">
+<div class="containerbig">
+<h3 class="cmsText-3xl">Mehr als nur eine Wärmequelle</h3>
+<p style="margin:20px 0">Ein Kaminofen schafft Atmosphäre, Gemütlichkeit und Unabhängigkeit. Ob als Hauptheizung oder zusätzliche Wärmequelle – moderne Kaminöfen verbinden Effizienz mit authentischem Feuererlebnis.</p>
+<p>Wir bieten Ihnen eine große Auswahl an Pellet- und Scheitholzöfen – von klassisch bis modern, von kompakt bis raumgreifend.</p>
 
-    <!-- Kaminofen-Systeme -->
-    <section class="section section-gray">
-        <div class="container">
-            <h2 class="section-title">Drei Systeme. Ein Ziel: Ihre perfekte Wärme.</h2>
-            
-            <div class="grid grid-3">
-                <div class="card">
-                    <div class="card-icon">🌾</div>
-                    <h3>Pelletöfen</h3>
-                    <h4>Komfort trifft Effizienz</h4>
-                    <p>Moderne Pelletöfen überzeugen durch automatische Beschickung, programmierbare Steuerung und höchste Effizienz. Perfekt für alle, die Komfort und Nachhaltigkeit verbinden möchten.</p>
-                    <ul class="feature-list">
-                        <li>Automatische Zündung und Brennstoffzufuhr</li>
-                        <li>Programmierbare Heizzeiten</li>
-                        <li>Hoher Wirkungsgrad bis 95%</li>
-                        <li>Geringe Emissionen</li>
-                        <li>Raumluftunabhängiger Betrieb möglich</li>
-                    </ul>
-                </div>
-                
-                <div class="card">
-                    <div class="card-icon">🪵</div>
-                    <h3>Scheitholzöfen</h3>
-                    <h4>Authentisch & unabhängig</h4>
-                    <p>Klassische Scheitholzöfen bieten ursprüngliches Feuererlebnis ohne Stromversorgung. Ideal für alle, die das echte, natürliche Heizen mit Holz schätzen.</p>
-                    <ul class="feature-list">
-                        <li>Natürliches Flammenspiel</li>
-                        <li>Keine Stromversorgung nötig</li>
-                        <li>Lange Brenndauer</li>
-                        <li>Vielfältige Designs</li>
-                        <li>Robuste Bauweise</li>
-                    </ul>
-                </div>
-                
-                <div class="card">
-                    <div class="card-icon">💧</div>
-                    <h3>Wasserführende Kaminöfen</h3>
-                    <h4>Heizen & Warmwasser in einem</h4>
-                    <p>Wasserführende Öfen erwärmen nicht nur den Aufstellraum, sondern unterstützen auch Ihre Zentralheizung und Warmwasserbereitung – effizient und förderfähig.</p>
-                    <ul class="feature-list">
-                        <li>Einbindung in Zentralheizung</li>
-                        <li>Warmwasserbereitung</li>
-                        <li>Heizkosten sparen</li>
-                        <li>BAFA-Förderung möglich</li>
-                        <li>Effiziente Energienutzung</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="grid-2" style="margin-top:60px">
+<div style="display:flex;align-items:flex-start;gap:20px">
+<div style="font-size:48px">🌱</div>
+<div><strong>Nachhaltig & klimaneutral</strong><br>Heizen mit nachwachsenden Rohstoffen – CO₂-neutral und umweltfreundlich.</div>
+</div>
+<div style="display:flex;align-items:flex-start;gap:20px">
+<div style="font-size:48px">💰</div>
+<div><strong>Kosteneffizient</strong><br>Unabhängig von fossilen Brennstoffen – langfristig günstigere Heizkosten.</div>
+</div>
+<div style="display:flex;align-items:flex-start;gap:20px">
+<div style="font-size:48px">🏠</div>
+<div><strong>Wertsteigerung</strong><br>Ein Kaminofen erhöht den Wert Ihrer Immobilie und schafft Wohlfühlatmosphäre.</div>
+</div>
+<div style="display:flex;align-items:flex-start;gap:20px">
+<div style="font-size:48px">🔥</div>
+<div><strong>Gemütliches Flammenspiel</strong><br>Erleben Sie echtes Feuer – für entspannte Abende und wohlige Wärme.</div>
+</div>
+</div>
+</div>
+</div>
 
-    <!-- Rundum-Service -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Von der Beratung bis zur Wartung – alles aus einer Hand</h2>
-            
-            <div class="grid grid-3">
-                <div class="usp-box">
-                    <div class="usp-icon">💡</div>
-                    <div class="usp-content">
-                        <h4>Beratung & Planung</h4>
-                        <p>Wir beraten Sie umfassend bei der Auswahl des passenden Kaminofens für Ihre Bedürfnisse und räumlichen Gegebenheiten.</p>
-                    </div>
-                </div>
-                <div class="usp-box">
-                    <div class="usp-icon">🔧</div>
-                    <div class="usp-content">
-                        <h4>Installation & Montage</h4>
-                        <p>Fachgerechter Einbau durch unsere erfahrenen Monteure. Wir kümmern uns um alle Anschlüsse und die Abnahme durch den Schornsteinfeger.</p>
-                    </div>
-                </div>
-                <div class="usp-box">
-                    <div class="usp-icon">⚙️</div>
-                    <div class="usp-content">
-                        <h4>Wartung & Service</h4>
-                        <p>Regelmäßige Wartung und Reinigung für langlebigen Betrieb. Schneller Service bei Störungen – wir sind für Sie da.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div style="background:#F5F5F5;padding:80px 0">
+<div class="containerbig">
+<h3 class="cmsText-3xl" style="text-align:center;margin-bottom:50px">Unsere Kaminofen-Lösungen</h3>
+<div class="grid-3">
+<div class="card">
+<h4>Pelletöfen – Komfort trifft Effizienz</h4>
+<p>Moderne Pelletöfen überzeugen durch automatische Beschickung, programmierbare Steuerung und höchste Effizienz.</p>
+<ul>
+<li>Automatische Zündung und Brennstoffzufuhr</li>
+<li>Programmierbare Heizzeiten</li>
+<li>Hoher Wirkungsgrad bis 95%</li>
+<li>Geringe Emissionen</li>
+<li>Raumluftunabhängiger Betrieb möglich</li>
+</ul>
+</div>
+<div class="card">
+<h4>Scheitholzöfen – Authentisch & unabhängig</h4>
+<p>Klassische Scheitholzöfen bieten ursprüngliches Feuererlebnis ohne Stromversorgung.</p>
+<ul>
+<li>Natürliches Flammenspiel</li>
+<li>Keine Stromversorgung nötig</li>
+<li>Lange Brenndauer</li>
+<li>Vielfältige Designs</li>
+<li>Robuste Bauweise</li>
+</ul>
+</div>
+<div class="card">
+<h4>Wasserführende Kaminöfen</h4>
+<p>Wasserführende Öfen erwärmen nicht nur den Aufstellraum, sondern unterstützen auch Ihre Zentralheizung.</p>
+<ul>
+<li>Einbindung in Zentralheizung</li>
+<li>Warmwasserbereitung</li>
+<li>Heizkosten sparen</li>
+<li>BAFA-Förderung möglich</li>
+<li>Effiziente Energienutzung</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 
-    <!-- Ausstellung -->
-    <section class="section section-gray">
-        <div class="container">
-            <h2 class="section-title">Kaminöfen live erleben</h2>
-            <p class="section-text">
-                In unserer Heizungsausstellung können Sie verschiedene Kaminofen-Modelle live sehen, anfassen und sich von der Qualität überzeugen. Vereinbaren Sie einen unverbindlichen Beratungstermin!
-            </p>
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="#kontakt" class="btn btn-primary">Zur Ausstellung</a>
-            </div>
-        </div>
-    </section>
+<div class="TextBaseElement">
+<div class="containerbig">
+<h3 class="cmsText-3xl" style="text-align:center;margin-bottom:50px">Unser Rundum-Service</h3>
+<div class="grid-3">
+<div style="text-align:center">
+<div style="font-size:60px;margin-bottom:20px">💬</div>
+<h4>Beratung & Planung</h4>
+<p>Wir beraten Sie umfassend bei der Auswahl des passenden Kaminofens für Ihre Bedürfnisse.</p>
+</div>
+<div style="text-align:center">
+<div style="font-size:60px;margin-bottom:20px">🔧</div>
+<h4>Installation & Montage</h4>
+<p>Fachgerechter Einbau durch unsere erfahrenen Monteure. Wir kümmern uns um alle Anschlüsse.</p>
+</div>
+<div style="text-align:center">
+<div style="font-size:60px;margin-bottom:20px">⚙️</div>
+<h4>Wartung & Service</h4>
+<p>Regelmäßige Wartung und Reinigung für langlebigen Betrieb. Schneller Service bei Störungen.</p>
+</div>
+</div>
+</div>
+</div>
 
-    <!-- Technische Voraussetzungen -->
-    <section class="section">
-        <div class="container" style="max-width: 800px;">
-            <h2 class="section-title">Was Sie wissen sollten</h2>
-            <p style="margin-bottom: 2rem;">Für den Betrieb eines Kaminofens sind einige technische Voraussetzungen zu beachten:</p>
-            
-            <ul class="feature-list">
-                <li>Geeigneter Schornstein oder Abgasanlage</li>
-                <li>Ausreichende Verbrennungsluftzufuhr</li>
-                <li>Brandschutzvorschriften beachten</li>
-                <li>Genehmigung durch den Schornsteinfeger</li>
-                <li>Einhaltung der Bundesimmissionsschutzverordnung</li>
-            </ul>
-            
-            <p style="margin-top: 2rem; font-weight: 600;">
-                <strong>Keine Sorge:</strong> Wir prüfen vor Ort alle Voraussetzungen und beraten Sie zu allen rechtlichen und technischen Anforderungen.
-            </p>
-        </div>
-    </section>
+<div class="cta-section" id="kontakt">
+<div class="containerbig">
+<h2 class="cmsText-4xl">Bereit für Ihren neuen Kaminofen?</h2>
+<p style="font-size:1.2rem;margin:20px 0">Lassen Sie sich von unseren Experten beraten und finden Sie den perfekten Ofen für Ihr Zuhause.</p>
+<a href="tel:+4994218610588" class="cta-whitewitharrow">09421 / 861 05 88</a>
+<a href="mailto:info@geiger-cizek.de" class="cta-whitewitharrow">E-Mail schreiben</a>
+</div>
+</div>
 
-    <!-- CTA Section -->
-    <section class="section section-red cta-section" id="kontakt">
-        <div class="container">
-            <h2>Bereit für Ihren neuen Kaminofen?</h2>
-            <p>Lassen Sie sich von unseren Experten beraten und finden Sie den perfekten Ofen für Ihr Zuhause.</p>
-            <div class="cta-buttons">
-                <a href="#kontakt" class="btn btn-secondary">Jetzt Beratungstermin vereinbaren</a>
-            </div>
-            <p><strong>oder rufen Sie uns an:</strong></p>
-            <a href="tel:+4994218610588" class="phone-link">09421 / 861 05 88</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div>
-                    <h4>Geiger & Cizek</h4>
-                    <p>Ihr Meisterbetrieb für Heizung, Sanitär und Klimatechnik in Straubing und Umgebung.</p>
-                </div>
-                <div>
-                    <h4>Leistungen</h4>
-                    <ul class="footer-links">
-                        <li><a href="heizungsbau.html">Heizungsbau</a></li>
-                        <li><a href="kaminoefen.html">Kaminöfen</a></li>
-                        <li><a href="badsanierung.html">Badsanierung</a></li>
-                        <li><a href="klimaanlage.html">Klimaanlage</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Kontakt</h4>
-                    <ul class="footer-links">
-                        <li>Telefon: 09421 / 861 05 88</li>
-                        <li>Straubing, Bayern</li>
-                        <li><a href="ueber-uns.html">Über uns</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Geiger & Cizek – Meisterbetrieb für Heizung, Sanitär und Klimatechnik</p>
-            </div>
-        </div>
-    </footer>
+<footer class="Footer">
+<div class="containerbig">
+<p><strong>Geiger & Cizek GbR</strong><br>Meisterbetrieb für Heizung, Sanitär und Klimatechnik<br>Straubing, Bayern</p>
+<p style="margin-top:20px;font-size:0.9rem;color:#666">© 2026 Geiger & Cizek GbR</p>
+</div>
+</footer>
 </body>
 </html>

@@ -1,150 +1,153 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de-DE">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Über uns – Geiger & Cizek Meisterbetrieb Straubing</title>
-    <meta name="description" content="Zwei Meister, ein Team – Ihr Partner für Heizung, Sanitär und Klimatechnik in Straubing. Seit über 15 Jahren. Lernen Sie uns kennen!">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<title>Über uns – Geiger & Cizek Meisterbetrieb Straubing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@font-face{font-family:Montserrat Font;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format("woff2")}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Montserrat Font,-apple-system,sans-serif;color:#192430;line-height:1.6}
+.Header{background:rgba(255,255,255,.95);position:fixed;top:0;left:50%;transform:translateX(-50%);width:97%;z-index:1000;padding:10px 40px;display:flex;justify-content:space-between;border-radius:0 0 30px 30px}
+.Header-logo{height:80px}.Header-nav{display:flex;gap:15px}.Header-navlink{color:#000;font-weight:600;text-transform:uppercase;text-decoration:none}
+.Header-navlink:hover{color:#E30613}.Header-btnlink{background:#E30613;color:#fff;padding:15px 25px;border-radius:35px;text-decoration:none}
+.Headerimage{position:relative;height:50vh;min-height:400px;margin:150px auto 100px;width:97%;border-radius:40px;overflow:hidden}
+.Headerimage img{width:100%;height:100%;object-fit:cover}.Headerimage-overlay{position:absolute;inset:0;background:rgba(0,0,0,.3)}
+.Headerimage-content{position:absolute;bottom:20px;left:50px;z-index:3;color:#fff;max-width:800px}
+.cmsText-4xl{font-size:2.625rem;font-weight:700;text-transform:uppercase}.cmsText-3xl{font-size:2rem;font-weight:700}
+.cmsText-2xl{font-size:1.5rem}.text-white{color:#fff}.containerbig{max-width:1700px;margin:0 auto;padding:0 50px}
+.section{padding:80px 0}.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;margin:50px 0}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin:50px 0;text-align:center}
+.CountBaseElement{background:#1A1A1A;color:#fff;padding:80px 0}
+.CountBaseElement-number{font-size:3rem;font-weight:700;color:#FFD500}
+.cta-section{background:#E30613;color:#fff;padding:80px 0;text-align:center}
+.cta-whitewitharrow{background:#fff;color:#192430;padding:20px 40px;border-radius:33px;text-decoration:none;display:inline-block;font-weight:600;margin:10px}
+.Footer{background:#F5F5F5;padding:50px;margin-top:100px}
+@media(max-width:1000px){.grid-2,.grid-4{grid-template-columns:1fr}}
+@media(max-width:600px){.Header-nav{display:none}.cmsText-4xl{font-size:1.8rem}}
+</style>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <a href="index.html" class="logo">Geiger & Cizek</a>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="heizungsbau.html" class="nav-link">Heizungsbau</a></li>
-                    <li><a href="kaminoefen.html" class="nav-link">Kaminöfen</a></li>
-                    <li><a href="badsanierung.html" class="nav-link">Badsanierung</a></li>
-                    <li><a href="klimaanlage.html" class="nav-link">Klimaanlage</a></li>
-                    <li><a href="ueber-uns.html" class="nav-link active">Über uns</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header class="Header">
+<a href="index.html"><svg class="Header-logo" width="200" height="80"><text x="10" y="50" font-size="32" font-weight="700" fill="#E30613">G&C</text></svg></a>
+<nav class="Header-nav">
+<a href="heizungsbau.html" class="Header-navlink">Heizungsbau</a>
+<a href="kaminoefen.html" class="Header-navlink">Kaminöfen</a>
+<a href="badsanierung.html" class="Header-navlink">Badsanierung</a>
+<a href="klimaanlage.html" class="Header-navlink">Klimaanlage</a>
+<a href="ueber-uns.html" class="Header-navlink" style="color:#E30613">Über uns</a>
+<a href="#kontakt" class="Header-btnlink">Beratung vereinbaren</a>
+</nav>
+</header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Zwei Meister. Ein Team. Ihre Zukunft.</h1>
-            <p>Seit über 15 Jahren Ihr Partner für Heizung, Sanitär und Klimatechnik in Straubing und Umgebung.</p>
-        </div>
-    </section>
+<div class="Headerimage">
+<img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1920&h=800&fit=crop" alt="Team Geiger & Cizek">
+<div class="Headerimage-overlay"></div>
+<div class="Headerimage-content">
+<h1 class="cmsText-4xl text-white">Zwei Meister. Ein Team. Ihre Zukunft.</h1>
+<p class="cmsText-2xl text-white">Seit über 15 Jahren Ihr Partner für Heizung, Sanitär und Klimatechnik in Straubing und Umgebung.</p>
+</div>
+</div>
 
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Wer wir sind</h2>
-            <p class="section-text">
-                Mit <strong>Karl Geiger</strong> und <strong>Florian Cizek</strong> haben Sie es mit zwei erfahrenen Meistern im Bereich Heizung, Lüftung und Sanitär zu tun. Gemeinsam mit unserem hochqualifizierten Team sorgen wir für Wärme, Komfort und Wohlfühlatmosphäre – in Straubing, Landshut, München, Passau und Umgebung.<br><br>
-                Unser Anspruch: Handwerk mit Leidenschaft, Beratung mit System, Ergebnisse, die überzeugen.
-            </p>
-        </div>
-    </section>
+<div class="section">
+<div class="containerbig">
+<div style="display:flex;gap:50px;align-items:center">
+<div style="flex:1">
+<h3 class="cmsText-3xl">Wer wir sind</h3>
+<p style="margin:20px 0">Mit <strong>Karl Geiger</strong> und <strong>Florian Cizek</strong> haben Sie es mit zwei erfahrenen Meistern im Bereich Heizung, Lüftung und Sanitär zu tun. Gemeinsam mit unserem hochqualifizierten Team sorgen wir für Wärme, Komfort und Wohlfühlatmosphäre – in Straubing, Landshut, München, Passau und Umgebung.</p>
+<p><strong>Unser Anspruch: Handwerk mit Leidenschaft, Beratung mit System, Ergebnisse, die überzeugen.</strong></p>
+</div>
+<div style="flex:1">
+<img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop" alt="Team" style="border-radius:40px;width:100%">
+</div>
+</div>
+</div>
+</div>
 
-    <section class="section section-gray">
-        <div class="container">
-            <h2 class="section-title">Was uns antreibt</h2>
-            <p class="section-text">
-                Wir sind keine Konzernfiliale, kein Call-Center, kein Montage-Trupp. Wir sind ein inhabergeführter Meisterbetrieb – mit Herzblut, Erfahrung und dem Willen, jeden Tag besser zu werden.
-            </p>
-            <div class="grid grid-2">
-                <div class="usp-box">
-                    <div class="usp-icon">💡</div>
-                    <div class="usp-content">
-                        <h4>Ehrlichkeit</h4>
-                        <p>Wir beraten Sie unabhängig und ehrlich – auch wenn es mal bedeutet, dass Sie (noch) nichts brauchen.</p>
-                    </div>
-                </div>
-                <div class="usp-box">
-                    <div class="usp-icon">🔧</div>
-                    <div class="usp-content">
-                        <h4>Handwerkskunst</h4>
-                        <p>Zwei Meister, jahrelange Erfahrung, saubere Arbeit – darauf können Sie sich verlassen.</p>
-                    </div>
-                </div>
-                <div class="usp-box">
-                    <div class="usp-icon">🤝</div>
-                    <div class="usp-content">
-                        <h4>Verlässlichkeit</h4>
-                        <p>Termine halten, Versprechen einhalten, erreichbar sein – für uns selbstverständlich.</p>
-                    </div>
-                </div>
-                <div class="usp-box">
-                    <div class="usp-icon">🌱</div>
-                    <div class="usp-content">
-                        <h4>Nachhaltigkeit</h4>
-                        <p>Wir denken langfristig – für Ihre Immobilie, für die Umwelt, für die Zukunft.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div style="background:#F5F5F5;padding:80px 0">
+<div class="containerbig">
+<h3 class="cmsText-3xl" style="text-align:center;margin-bottom:50px">Was uns antreibt</h3>
+<p style="text-align:center;max-width:900px;margin:0 auto 50px">Wir sind keine Konzernfiliale, kein Call-Center, kein Montage-Trupp. Wir sind ein inhabergeführter Meisterbetrieb – mit Herzblut, Erfahrung und dem Willen, jeden Tag besser zu werden.</p>
 
-    <section class="section section-dark">
-        <div class="container">
-            <h2 class="section-title">Geiger & Cizek in Zahlen</h2>
-            <div class="grid grid-4">
-                <div class="stats">
-                    <span class="stat-number">15+</span>
-                    <span class="stat-label">Jahre Erfahrung</span>
-                </div>
-                <div class="stats">
-                    <span class="stat-number">1.200+</span>
-                    <span class="stat-label">Zufriedene Kunden</span>
-                </div>
-                <div class="stats">
-                    <span class="stat-number">48h</span>
-                    <span class="stat-label">Reaktionszeit</span>
-                </div>
-                <div class="stats">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Transparenz</span>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="grid-2">
+<div style="display:flex;align-items:flex-start;gap:20px">
+<div style="font-size:48px">💡</div>
+<div><strong>Ehrlichkeit</strong><br>Wir beraten Sie unabhängig und ehrlich – auch wenn es mal bedeutet, dass Sie (noch) nichts brauchen.</div>
+</div>
+<div style="display:flex;align-items:flex-start;gap:20px">
+<div style="font-size:48px">🔧</div>
+<div><strong>Handwerkskunst</strong><br>Zwei Meister, jahrelange Erfahrung, saubere Arbeit – darauf können Sie sich verlassen.</div>
+</div>
+<div style="display:flex;align-items:flex-start;gap:20px">
+<div style="font-size:48px">🤝</div>
+<div><strong>Verlässlichkeit</strong><br>Termine halten, Versprechen einhalten, erreichbar sein – für uns selbstverständlich.</div>
+</div>
+<div style="display:flex;align-items:flex-start;gap:20px">
+<div style="font-size:48px">🌱</div>
+<div><strong>Nachhaltigkeit</strong><br>Wir denken langfristig – für Ihre Immobilie, für die Umwelt, für die Zukunft.</div>
+</div>
+</div>
+</div>
+</div>
 
-    <section class="section section-red cta-section">
-        <div class="container">
-            <h2>Lernen Sie uns kennen</h2>
-            <p>Vereinbaren Sie einen unverbindlichen Beratungstermin – wir freuen uns auf Sie!</p>
-            <div class="cta-buttons">
-                <a href="#kontakt" class="btn btn-secondary">Kontakt aufnehmen</a>
-            </div>
-            <p><strong>oder rufen Sie uns an:</strong></p>
-            <a href="tel:+4994218610588" class="phone-link">09421 / 861 05 88</a>
-        </div>
-    </section>
+<div class="CountBaseElement">
+<div class="containerbig">
+<h3 class="cmsText-3xl" style="text-align:center;margin-bottom:50px">Geiger & Cizek in Zahlen</h3>
+<div class="grid-4">
+<div>
+<div class="CountBaseElement-number">15+</div>
+<div style="text-transform:uppercase;margin:10px 0">Jahre Erfahrung</div>
+<p style="font-size:0.9rem">Seit 2010 Ihr zuverlässiger Partner</p>
+</div>
+<div>
+<div class="CountBaseElement-number">1.200+</div>
+<div style="text-transform:uppercase;margin:10px 0">Zufriedene Kunden</div>
+<p style="font-size:0.9rem">In Straubing und Umgebung</p>
+</div>
+<div>
+<div class="CountBaseElement-number">48h</div>
+<div style="text-transform:uppercase;margin:10px 0">Reaktionszeit</div>
+<p style="font-size:0.9rem">Wir antworten schnell</p>
+</div>
+<div>
+<div class="CountBaseElement-number">100%</div>
+<div style="text-transform:uppercase;margin:10px 0">Transparenz</div>
+<p style="font-size:0.9rem">Ehrliche Kommunikation</p>
+</div>
+</div>
+</div>
+</div>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div>
-                    <h4>Geiger & Cizek</h4>
-                    <p>Ihr Meisterbetrieb für Heizung, Sanitär und Klimatechnik in Straubing und Umgebung.</p>
-                </div>
-                <div>
-                    <h4>Leistungen</h4>
-                    <ul class="footer-links">
-                        <li><a href="heizungsbau.html">Heizungsbau</a></li>
-                        <li><a href="kaminoefen.html">Kaminöfen</a></li>
-                        <li><a href="badsanierung.html">Badsanierung</a></li>
-                        <li><a href="klimaanlage.html">Klimaanlage</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Kontakt</h4>
-                    <ul class="footer-links">
-                        <li>Telefon: 09421 / 861 05 88</li>
-                        <li>Straubing, Bayern</li>
-                        <li><a href="ueber-uns.html">Über uns</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Geiger & Cizek – Meisterbetrieb für Heizung, Sanitär und Klimatechnik</p>
-            </div>
-        </div>
-    </footer>
+<div class="section">
+<div class="containerbig">
+<h3 class="cmsText-3xl" style="text-align:center;margin-bottom:30px">Unser Einzugsgebiet</h3>
+<p style="text-align:center;margin-bottom:30px">Wir sind in Straubing zu Hause – und in der gesamten Region unterwegs:</p>
+<div style="display:grid;grid-template-columns:repeat(7,1fr);gap:20px;text-align:center;margin:50px 0">
+<div>Straubing</div>
+<div>Regensburg</div>
+<div>Landshut</div>
+<div>Deggendorf</div>
+<div>Bogen</div>
+<div>München</div>
+<div>Passau</div>
+</div>
+<p style="text-align:center"><strong>Sie sind sich unsicher, ob wir zu Ihnen kommen?</strong> Einfach anfragen – wir finden eine Lösung.</p>
+</div>
+</div>
+
+<div class="cta-section" id="kontakt">
+<div class="containerbig">
+<h2 class="cmsText-4xl">Lernen Sie uns kennen</h2>
+<p style="font-size:1.2rem;margin:20px 0">Wir freuen uns auf Ihre Anfrage!</p>
+<a href="tel:+4994218610588" class="cta-whitewitharrow">09421 / 861 05 88</a>
+<a href="mailto:info@geiger-cizek.de" class="cta-whitewitharrow">E-Mail schreiben</a>
+</div>
+</div>
+
+<footer class="Footer">
+<div class="containerbig">
+<p><strong>Geiger & Cizek GbR</strong><br>Straubing, Bayern</p>
+<p style="margin-top:20px;font-size:0.9rem;color:#666">© 2026 Geiger & Cizek GbR</p>
+</div>
+</footer>
 </body>
 </html>

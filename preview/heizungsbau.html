@@ -1,118 +1,179 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de-DE" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <title>Heizungsbau Straubing – Wärmepumpe, Pelletheizung & mehr | Geiger & Cizek</title>
-    <meta name="description" content="Moderne Heiztechnik für Straubing und Umgebung. Wärmepumpen, Pelletheizungen, Hybridlösungen – mit 10 Jahren Funktionsgarantie. Jetzt beraten lassen!">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Moderne Heiztechnik für Straubing und Umgebung. Wärmepumpen, Pelletheizungen, Hybridlösungen – mit 10 Jahren Funktionsgarantie.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.html">
+    <style>
+        @font-face{font-display:swap;font-family:Montserrat Font;font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format("woff2")}
+        @font-face{font-display:swap;font-family:Montserrat Font;font-style:normal;font-weight:600;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format("woff2")}
+        @font-face{font-display:swap;font-family:Montserrat Font;font-style:normal;font-weight:700;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format("woff2")}
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Montserrat Font, -apple-system, sans-serif; font-size: 1rem; color: #192430; line-height: 1.6; }
+        img { max-width: 100%; height: auto; }
+        
+        .Header { background: rgba(255,255,255,0.95); backdrop-filter: blur(49px); position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 97%; z-index: 1000; padding: 10px 40px; display: flex; justify-content: space-between; align-items: center; border-radius: 0 0 30px 30px; }
+        .Header-logo { height: 80px; }
+        .Header-nav { display: flex; gap: 15px; align-items: center; }
+        .Header-navlink { color: #000; font-weight: 600; text-transform: uppercase; font-size: 1.1rem; text-decoration: none; }
+        .Header-navlink:hover { color: #E30613; }
+        .Header-btnlink { background: #E30613; color: #fff; padding: 15px 25px; border-radius: 35px; text-transform: uppercase; font-weight: 600; text-decoration: none; }
+        .Header-btnlink:hover { background: #FFD500; color: #192430; }
+        
+        .Headerimage { position: relative; height: 50vh; min-height: 400px; margin: 150px auto 100px; width: 97%; overflow: hidden; border-radius: 40px; }
+        .Headerimage img { width: 100%; height: 100%; object-fit: cover; }
+        .Headerimage-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.3); }
+        .Headerimage-content { position: absolute; bottom: 20px; left: 50px; z-index: 3; color: #fff; max-width: 800px; }
+        .cmsText-2xl { font-size: 1.5rem; line-height: 1.3; }
+        .cmsText-4xl { font-size: 2.625rem; font-weight: 700; line-height: 1.1; text-transform: uppercase; }
+        .cmsText-3xl { font-size: 2rem; font-weight: 700; }
+        .cmsText-lg { font-size: 1.125rem; font-weight: 600; text-transform: uppercase; }
+        .text-white { color: #fff; }
+        .text-orange { color: #E30613; }
+        
+        .containerbig { max-width: 1700px; margin: 0 auto; padding: 0 50px; }
+        .TextBaseElement { padding: 80px 0; }
+        .ImageTextBaseElement { padding: 80px 0; }
+        .ImageTextBaseElement-holder { display: flex; justify-content: space-between; align-items: center; gap: 50px; }
+        .ImageTextBaseElement-content { width: 45%; }
+        .ImageTextBaseElement-imageholder { width: 50%; }
+        .ImageTextBaseElement-image { border-radius: 40px; width: 100%; }
+        
+        .cta-darkwitharrow { background: #192430; color: #fff; padding: 20px 80px 20px 40px; border-radius: 33px; text-decoration: none; display: inline-block; font-weight: 600; min-width: 200px; }
+        .cta-darkwitharrow:hover { background: #fff; color: #192430; }
+        
+        .BoxImageTextBaseElement { background: #E30613; color: #fff; padding: 80px 0; text-align: center; }
+        .BoxImageTextBaseElement h2 { font-size: 2.625rem; margin-bottom: 20px; }
+        .cta-whitewitharrow { background: #fff; color: #192430; padding: 20px 40px; border-radius: 33px; text-decoration: none; display: inline-block; font-weight: 600; margin-top: 20px; }
+        .cta-whitewitharrow:hover { background: #FFD500; }
+        
+        .TeaserSliderBaseElement-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin: 50px 0; }
+        .TeaserSliderBaseElement-card { background: #fff; border: 1px solid #ddd; border-radius: 40px; padding: 40px; }
+        .TeaserSliderBaseElement-card h4 { color: #E30613; font-size: 1.5rem; margin-bottom: 15px; }
+        .TeaserSliderBaseElement-card ul { list-style: none; padding: 0; margin: 15px 0; }
+        .TeaserSliderBaseElement-card li:before { content: "✅ "; color: #FFD500; margin-right: 10px; }
+        
+        .Footer { background: #F5F5F5; padding: 50px 0; margin-top: 100px; }
+        .Footermain-flex { display: flex; justify-content: space-between; max-width: 1700px; margin: 0 auto; padding: 0 50px; }
+        .Footermain-content { width: 60%; }
+        .Footermain-nav { margin-top: 20px; }
+        .Footermain-navlink { color: #192430; text-decoration: none; margin-right: 10px; }
+        
+        @media (max-width: 1000px) {
+            .ImageTextBaseElement-holder { flex-direction: column; }
+            .ImageTextBaseElement-content, .ImageTextBaseElement-imageholder { width: 100%; }
+            .TeaserSliderBaseElement-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 600px) {
+            .Header { padding: 10px 20px; }
+            .Header-logo { height: 60px; }
+            .Header-nav { display: none; }
+            .cmsText-4xl { font-size: 1.8rem; }
+            .cmsText-2xl { font-size: 1.18rem; }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header & Navigation -->
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <a href="index.html" class="logo">Geiger & Cizek</a>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="heizungsbau.html" class="nav-link active">Heizungsbau</a></li>
-                    <li><a href="kaminoefen.html" class="nav-link">Kaminöfen</a></li>
-                    <li><a href="badsanierung.html" class="nav-link">Badsanierung</a></li>
-                    <li><a href="klimaanlage.html" class="nav-link">Klimaanlage</a></li>
-                    <li><a href="ueber-uns.html" class="nav-link">Über uns</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="Header">
+        <a href="index.html" class="Header-homelink">
+            <svg class="Header-logo" width="200" height="80" viewBox="0 0 200 80">
+                <text x="10" y="50" font-family="Montserrat Font" font-size="32" font-weight="700" fill="#E30613">G&C</text>
+            </svg>
+        </a>
+        <nav class="Header-nav">
+            <a href="heizungsbau.html" class="Header-navlink" style="color: #E30613;">Heizungsbau</a>
+            <a href="kaminoefen.html" class="Header-navlink">Kaminöfen</a>
+            <a href="badsanierung.html" class="Header-navlink">Badsanierung</a>
+            <a href="klimaanlage.html" class="Header-navlink">Klimaanlage</a>
+            <a href="ueber-uns.html" class="Header-navlink">Über uns</a>
+            <a href="#kontakt" class="Header-btnlink">Beratung vereinbaren</a>
+        </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Wärme, die bleibt – heute und in Zukunft</h1>
-            <p>Moderne Heiztechnologie für Straubing und Umgebung. Von der Wärmepumpe bis zur klassischen Gasheizung – wir finden die perfekte Lösung für Ihr Zuhause.</p>
-            <a href="#kontakt" class="btn btn-primary">Jetzt Beratung vereinbaren</a>
+    <div class="Headerimage">
+        <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=1920&h=800&fit=crop" alt="Moderne Heizung">
+        <div class="Headerimage-overlay"></div>
+        <div class="Headerimage-content">
+            <h1><span class="cmsText-4xl text-white">Wärme, die bleibt – heute und in Zukunft</span></h1>
+            <p class="cmsText-2xl text-white">Moderne Heiztechnologie für Straubing und Umgebung. Von der Wärmepumpe bis zur klassischen Gasheizung.</p>
         </div>
-    </section>
+    </div>
 
-    <!-- Intro -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Ihr Partner für moderne Heiztechnik</h2>
-            <p class="section-text">
-                Wohlige Wärme, wenn Sie sie brauchen – das ist unser Versprechen. Als Heizungsspezialisten für Straubing, Regensburg, Deggendorf und Bogen begleiten wir Sie von der ersten Beratung bis zur fertigen Installation.<br><br>
-                Egal ob Neubau, Modernisierung oder Heizungstausch: Wir planen individuell, setzen professionell um und lassen Sie nicht im Stich. Mit mehr als 15 Jahren Erfahrung und einem hochqualifizierten Team sorgen wir dafür, dass Ihre Heizung läuft – zuverlässig und effizient.
-            </p>
+    <div class="TextBaseElement">
+        <div class="containerbig">
+            <h3 class="cmsText-3xl">Ihr Partner für moderne Heiztechnik</h3>
+            <p style="margin: 20px 0;">Wohlige Wärme, wenn Sie sie brauchen – das ist unser Versprechen. Als Heizungsspezialisten für Straubing, Regensburg, Deggendorf und Bogen begleiten wir Sie von der ersten Beratung bis zur fertigen Installation.</p>
+            <p>Egal ob Neubau, Modernisierung oder Heizungstausch: Wir planen individuell, setzen professionell um und lassen Sie nicht im Stich. Mit mehr als 15 Jahren Erfahrung und einem hochqualifizierten Team sorgen wir dafür, dass Ihre Heizung läuft – zuverlässig und effizient.</p>
         </div>
-    </section>
+    </div>
 
-    <!-- 10 Jahre Garantie -->
-    <section class="section section-gray">
-        <div class="container">
-            <div class="highlight-box">
-                <h2>10 Jahre Funktionsgarantie</h2>
-                <h3>Maximale Sicherheit. Null Überraschungen.</h3>
-                <p>
-                    Mit unserer <strong>10 Jahre Funktionsgarantie</strong> sind alle wesentlichen Komponenten Ihrer Heizungsanlage über den gesamten Zeitraum abgesichert. Keine versteckten Kosten, keine bösen Überraschungen – nur verlässliche Wärme, wenn Sie sie brauchen.
-                </p>
-                <div style="margin-top: 2rem;">
-                    <p><strong>Zahlen-Vergleich:</strong></p>
-                    <p>Gesetzliche Gewährleistung: <strong>2 Jahre</strong><br>
-                    Die meisten Hersteller: <strong>5 Jahre</strong><br>
-                    Unsere Funktionsgarantie: <strong>10 Jahre</strong></p>
+    <div class="ImageTextBaseElement" style="background: #FFD500;">
+        <div class="containerbig">
+            <div class="ImageTextBaseElement-holder">
+                <div class="ImageTextBaseElement-content">
+                    <h3 class="cmsText-3xl">10 Jahre Funktionsgarantie</h3>
+                    <p style="margin: 20px 0; font-size: 1.1rem;"><strong>Maximale Sicherheit. Null Überraschungen.</strong></p>
+                    <p>Mit unserer <strong>10 Jahre Funktionsgarantie</strong> sind alle wesentlichen Komponenten Ihrer Heizungsanlage über den gesamten Zeitraum abgesichert. Keine versteckten Kosten, keine bösen Überraschungen – nur verlässliche Wärme, wenn Sie sie brauchen.</p>
+                    <p style="margin: 20px 0;"><strong>Zahlen-Vergleich:</strong></p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>✅ Gesetzliche Gewährleistung: <strong>2 Jahre</strong></li>
+                        <li>✅ Die meisten Hersteller: <strong>5 Jahre</strong></li>
+                        <li>✅ Unsere Funktionsgarantie: <strong>10 Jahre</strong></li>
+                    </ul>
+                </div>
+                <div class="ImageTextBaseElement-imageholder">
+                    <img class="ImageTextBaseElement-image" src="https://images.unsplash.com/photo-1615876234886-fd9a39fda97f?w=800&h=600&fit=crop" alt="10 Jahre Garantie">
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Heizungssysteme -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Unsere Heizungssysteme</h2>
-            <p class="section-text">Von umweltfreundlichen Wärmepumpen bis zur bewährten Gasheizung – wir beraten Sie ehrlich und unabhängig.</p>
+    <div class="TextBaseElement">
+        <div class="containerbig">
+            <h3 class="cmsText-3xl" style="text-align:center; margin-bottom: 30px;">Unsere Heizungssysteme</h3>
+            <p style="text-align:center; font-size: 1.1rem; margin-bottom: 50px;">Von umweltfreundlichen Wärmepumpen bis zur bewährten Gasheizung – wir beraten Sie ehrlich und unabhängig.</p>
             
-            <div class="grid grid-2" style="margin-bottom: 4rem;" id="waermepumpe">
-                <div class="card">
-                    <div class="card-icon">🌱</div>
-                    <h3>Wärmepumpe</h3>
-                    <h4>Die umweltfreundliche Zukunft</h4>
+            <div class="TeaserSliderBaseElement-grid">
+                <div class="TeaserSliderBaseElement-card" id="waermepumpe">
+                    <h4>Wärmepumpe – Die umweltfreundliche Zukunft</h4>
                     <p>Nutzen Sie die natürliche Wärme aus Luft, Erde oder Grundwasser – ganz ohne fossile Brennstoffe.</p>
-                    <ul class="feature-list">
+                    <ul>
                         <li>Niedrige Betriebskosten</li>
                         <li>Wertsteigerung der Immobilie</li>
                         <li>Geringer Wartungsaufwand</li>
                         <li>Auch bei Minusgraden effektiv</li>
                     </ul>
                 </div>
-                <div class="card">
-                    <div class="card-icon">🪵</div>
-                    <h3>Pelletheizung</h3>
-                    <h4>CO₂-neutral und nachhaltig</h4>
+                
+                <div class="TeaserSliderBaseElement-card">
+                    <h4>Pelletheizung – CO₂-neutral und nachhaltig</h4>
                     <p>Holz als Wärmequelle – modern, klimafreundlich und kostengünstig.</p>
-                    <ul class="feature-list">
+                    <ul>
                         <li>Günstige Alternative zu Öl und Gas</li>
                         <li>Hohe Versorgungssicherheit</li>
                         <li>Kombinierbar mit Solarthermie</li>
                         <li>Nachhaltige Heizmethode</li>
                     </ul>
                 </div>
-                <div class="card">
-                    <div class="card-icon">⚡</div>
-                    <h3>Hybridheizung</h3>
-                    <h4>Das Beste aus zwei Welten</h4>
+                
+                <div class="TeaserSliderBaseElement-card">
+                    <h4>Hybridheizung – Das Beste aus zwei Welten</h4>
                     <p>Kombinieren Sie bewährte Technik mit erneuerbaren Energien – flexibel, effizient und zukunftssicher.</p>
-                    <ul class="feature-list">
+                    <ul>
                         <li>Umweltfreundlicher heizen</li>
                         <li>Deutlich geringere Kosten</li>
                         <li>Kombination mit Solarthermie</li>
                         <li>Klimafreundlich und wirtschaftlich</li>
                     </ul>
                 </div>
-                <div class="card">
-                    <div class="card-icon">🔥</div>
-                    <h3>Gasheizung & Ölheizung</h3>
-                    <h4>Bewährt und zuverlässig</h4>
+                
+                <div class="TeaserSliderBaseElement-card">
+                    <h4>Gasheizung & Ölheizung – Bewährt und zuverlässig</h4>
                     <p>Moderne Brennwerttechnik macht klassische Heizsysteme effizienter denn je.</p>
-                    <ul class="feature-list">
+                    <ul>
                         <li>Moderate Anschaffungskosten (Gas)</li>
                         <li>Wenig Platzbedarf (Gas)</li>
                         <li>Freie Lieferantenwahl (Öl)</li>
@@ -121,91 +182,55 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Hydraulischer Abgleich -->
-    <section class="section section-gray">
-        <div class="container">
-            <h2 class="section-title">Hydraulischer Abgleich</h2>
-            <h3 style="text-align: center; margin-bottom: 2rem;">13-20% Energie sparen – mit einer einmaligen Optimierung</h3>
-            <p class="section-text">
-                Der hydraulische Abgleich ist eine der wirkungsvollsten Maßnahmen, um Heizkosten zu senken und den Wohnkomfort zu erhöhen. Gerade bei Wärmepumpen und Fußbodenheizungen zeigt sich das enorme Einsparpotenzial.
-            </p>
-            
-            <div class="grid grid-2">
-                <div class="usp-box">
-                    <div class="usp-icon">💰</div>
-                    <div class="usp-content">
-                        <h4>Energieeinsparung</h4>
-                        <p>13-20% weniger Verbrauch – besonders effektiv in Mehrfamilienhäusern und bei Fußbodenheizungen.</p>
-                    </div>
+    <div class="ImageTextBaseElement">
+        <div class="containerbig">
+            <div class="ImageTextBaseElement-holder">
+                <div class="ImageTextBaseElement-imageholder">
+                    <img class="ImageTextBaseElement-image" src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop" alt="Hydraulischer Abgleich">
                 </div>
-                <div class="usp-box">
-                    <div class="usp-icon">⚡</div>
-                    <div class="usp-content">
-                        <h4>Optimiert für Wärmepumpen</h4>
-                        <p>Deutlich geringerer Stromverbrauch durch perfekt abgestimmte Verteilung.</p>
-                    </div>
-                </div>
-                <div class="usp-box">
-                    <div class="usp-icon">🏠</div>
-                    <div class="usp-content">
-                        <h4>Wertsteigerung</h4>
-                        <p>Mehr Wohnkomfort, höherer Immobilienwert.</p>
-                    </div>
-                </div>
-                <div class="usp-box">
-                    <div class="usp-icon">🌱</div>
-                    <div class="usp-content">
-                        <h4>Umweltschutz</h4>
-                        <p>Weniger Energieverbrauch = weniger CO₂-Ausstoß.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="section section-red cta-section" id="kontakt">
-        <div class="container">
-            <h2>Bereit für Ihre neue Heizung?</h2>
-            <p>Wir beraten Sie individuell – egal ob Neubau, Modernisierung oder Heizungstausch. Gemeinsam finden wir die beste Lösung für Ihre Immobilie.</p>
-            <div class="cta-buttons">
-                <a href="#kontakt" class="btn btn-secondary">Zum Kontaktformular</a>
-            </div>
-            <p><strong>oder rufen Sie uns an:</strong></p>
-            <a href="tel:+4994218610588" class="phone-link">09421 / 861 05 88</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div>
-                    <h4>Geiger & Cizek</h4>
-                    <p>Ihr Meisterbetrieb für Heizung, Sanitär und Klimatechnik in Straubing und Umgebung.</p>
-                </div>
-                <div>
-                    <h4>Leistungen</h4>
-                    <ul class="footer-links">
-                        <li><a href="heizungsbau.html">Heizungsbau</a></li>
-                        <li><a href="kaminoefen.html">Kaminöfen</a></li>
-                        <li><a href="badsanierung.html">Badsanierung</a></li>
-                        <li><a href="klimaanlage.html">Klimaanlage</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Kontakt</h4>
-                    <ul class="footer-links">
-                        <li>Telefon: 09421 / 861 05 88</li>
-                        <li>Straubing, Bayern</li>
-                        <li><a href="ueber-uns.html">Über uns</a></li>
+                <div class="ImageTextBaseElement-content">
+                    <h3 class="cmsText-3xl"><span class="text-orange">Hydraulischer Abgleich:</span> 13-20% Energie sparen</h3>
+                    <p style="margin: 20px 0;">Der hydraulische Abgleich ist eine der wirkungsvollsten Maßnahmen, um Heizkosten zu senken und den Wohnkomfort zu erhöhen. Gerade bei Wärmepumpen und Fußbodenheizungen zeigt sich das enorme Einsparpotenzial.</p>
+                    <p><strong>Was Sie gewinnen:</strong></p>
+                    <ul style="list-style: none; padding: 0; margin: 20px 0;">
+                        <li style="margin: 10px 0;"><strong>💰 Energieeinsparung:</strong> 13-20% weniger Verbrauch</li>
+                        <li style="margin: 10px 0;"><strong>⚡ Optimiert für Wärmepumpen:</strong> Deutlich geringerer Stromverbrauch</li>
+                        <li style="margin: 10px 0;"><strong>🏠 Wertsteigerung:</strong> Mehr Wohnkomfort, höherer Immobilienwert</li>
+                        <li style="margin: 10px 0;"><strong>🌱 Umweltschutz:</strong> Weniger CO₂-Ausstoß</li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Geiger & Cizek – Meisterbetrieb für Heizung, Sanitär und Klimatechnik</p>
+        </div>
+    </div>
+
+    <div class="BoxImageTextBaseElement" id="kontakt">
+        <div class="containerbig">
+            <h2 class="cmsText-4xl">Bereit für Ihre neue Heizung?</h2>
+            <p style="font-size: 1.2rem; margin: 20px 0;">Wir beraten Sie individuell – egal ob Neubau, Modernisierung oder Heizungstausch. Gemeinsam finden wir die beste Lösung für Ihre Immobilie.</p>
+            <a href="tel:+4994218610588" class="cta-whitewitharrow">09421 / 861 05 88</a>
+            <a href="mailto:info@geiger-cizek.de" class="cta-whitewitharrow">E-Mail schreiben</a>
+        </div>
+    </div>
+
+    <footer class="Footer">
+        <div class="Footermain">
+            <div class="Footermain-flex">
+                <div class="Footermain-content">
+                    <p><strong>Geiger & Cizek GbR</strong><br>
+                    Meisterbetrieb für Heizung, Sanitär und Klimatechnik<br>
+                    Straubing, Bayern</p>
+                    <nav class="Footermain-nav">
+                        <a href="index.html" class="Footermain-navlink">Home</a>
+                        <a href="heizungsbau.html" class="Footermain-navlink">Heizungsbau</a>
+                        <a href="kaminoefen.html" class="Footermain-navlink">Kaminöfen</a>
+                        <a href="badsanierung.html" class="Footermain-navlink">Badsanierung</a>
+                        <a href="klimaanlage.html" class="Footermain-navlink">Klimaanlage</a>
+                        <a href="ueber-uns.html" class="Footermain-navlink">Über uns</a>
+                    </nav>
+                    <p style="margin-top: 20px; font-size: 0.9rem; color: #666;">© 2026 Geiger & Cizek GbR. Alle Rechte vorbehalten.</p>
+                </div>
             </div>
         </div>
     </footer>

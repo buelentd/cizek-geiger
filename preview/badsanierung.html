@@ -1,216 +1,149 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de-DE">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Badsanierung Straubing – Komplett oder Teilsanierung | Geiger & Cizek</title>
-    <meta name="description" content="Professionelle Badsanierung in Straubing. Komplettbad, Teilsanierung, barrierefrei – alles aus einer Hand. Jetzt beraten lassen!">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<title>Badsanierung Straubing | Geiger & Cizek</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@font-face{font-family:Montserrat Font;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format("woff2")}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Montserrat Font,-apple-system,sans-serif;color:#192430;line-height:1.6}
+.Header{background:rgba(255,255,255,.95);position:fixed;top:0;left:50%;transform:translateX(-50%);width:97%;z-index:1000;padding:10px 40px;display:flex;justify-content:space-between;border-radius:0 0 30px 30px}
+.Header-logo{height:80px}.Header-nav{display:flex;gap:15px}.Header-navlink{color:#000;font-weight:600;text-transform:uppercase;text-decoration:none}
+.Header-navlink:hover{color:#E30613}.Header-btnlink{background:#E30613;color:#fff;padding:15px 25px;border-radius:35px;text-decoration:none}
+.Headerimage{position:relative;height:50vh;min-height:400px;margin:150px auto 100px;width:97%;border-radius:40px;overflow:hidden}
+.Headerimage img{width:100%;height:100%;object-fit:cover}.Headerimage-overlay{position:absolute;inset:0;background:rgba(0,0,0,.3)}
+.Headerimage-content{position:absolute;bottom:20px;left:50px;z-index:3;color:#fff;max-width:800px}
+.cmsText-4xl{font-size:2.625rem;font-weight:700;text-transform:uppercase}.cmsText-3xl{font-size:2rem;font-weight:700}
+.cmsText-2xl{font-size:1.5rem}.text-white{color:#fff}.containerbig{max-width:1700px;margin:0 auto;padding:0 50px}
+.section{padding:80px 0}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin:50px 0}
+.card{background:#fff;border:1px solid #ddd;border-radius:40px;padding:40px;text-align:center}
+.card h4{color:#E30613;font-size:1.5rem;margin-bottom:15px}.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:40px}
+.cta-section{background:#E30613;color:#fff;padding:80px 0;text-align:center}
+.cta-whitewitharrow{background:#fff;color:#192430;padding:20px 40px;border-radius:33px;text-decoration:none;display:inline-block;font-weight:600;margin:10px}
+.Footer{background:#F5F5F5;padding:50px;margin-top:100px}
+@media(max-width:1000px){.grid-2,.grid-3{grid-template-columns:1fr}}
+@media(max-width:600px){.Header-nav{display:none}.cmsText-4xl{font-size:1.8rem}}
+</style>
 </head>
 <body>
-    <!-- Header & Navigation -->
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <a href="index.html" class="logo">Geiger & Cizek</a>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="heizungsbau.html" class="nav-link">Heizungsbau</a></li>
-                    <li><a href="kaminoefen.html" class="nav-link">Kaminöfen</a></li>
-                    <li><a href="badsanierung.html" class="nav-link active">Badsanierung</a></li>
-                    <li><a href="klimaanlage.html" class="nav-link">Klimaanlage</a></li>
-                    <li><a href="ueber-uns.html" class="nav-link">Über uns</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header class="Header">
+<a href="index.html"><svg class="Header-logo" width="200" height="80"><text x="10" y="50" font-size="32" font-weight="700" fill="#E30613">G&C</text></svg></a>
+<nav class="Header-nav">
+<a href="heizungsbau.html" class="Header-navlink">Heizungsbau</a>
+<a href="kaminoefen.html" class="Header-navlink">Kaminöfen</a>
+<a href="badsanierung.html" class="Header-navlink" style="color:#E30613">Badsanierung</a>
+<a href="klimaanlage.html" class="Header-navlink">Klimaanlage</a>
+<a href="ueber-uns.html" class="Header-navlink">Über uns</a>
+<a href="#kontakt" class="Header-btnlink">Beratung vereinbaren</a>
+</nav>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Ihr neues Bad – geplant, gebaut, perfekt</h1>
-            <p>Von der ersten Idee bis zur fertigen Wohlfühloase. Alles aus einer Hand – in Straubing und Umgebung.</p>
-            <a href="#kontakt" class="btn btn-primary">Beratungstermin vereinbaren</a>
-        </div>
-    </section>
+<div class="Headerimage">
+<img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1920&h=800&fit=crop" alt="Modernes Bad">
+<div class="Headerimage-overlay"></div>
+<div class="Headerimage-content">
+<h1 class="cmsText-4xl text-white">Ihr neues Bad – geplant, gebaut, perfekt</h1>
+<p class="cmsText-2xl text-white">Von der ersten Idee bis zur fertigen Wohlfühloase. Alles aus einer Hand.</p>
+</div>
+</div>
 
-    <!-- Intro -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Badsanierung mit System</h2>
-            <p class="section-text">
-                Ein Bad ist mehr als Fliesen und Armaturen – es ist Ihr persönlicher Rückzugsort. Wir gestalten Badezimmer, die zu Ihnen passen: modern oder klassisch, barrierefrei oder luxuriös, kompakt oder großzügig.<br><br>
-                Unser Anspruch: Planung mit Weitblick, Umsetzung mit Präzision, Ergebnis mit Wow-Effekt.
-            </p>
-        </div>
-    </section>
+<div class="section">
+<div class="containerbig">
+<h3 class="cmsText-3xl">Badsanierung mit System</h3>
+<p style="margin:20px 0">Ein Bad ist mehr als Fliesen und Armaturen – es ist Ihr persönlicher Rückzugsort. Wir gestalten Badezimmer, die zu Ihnen passen: modern oder klassisch, barrierefrei oder luxuriös, kompakt oder großzügig.</p>
+<p><strong>Unser Anspruch: Planung mit Weitblick, Umsetzung mit Präzision, Ergebnis mit Wow-Effekt.</strong></p>
+</div>
+</div>
 
-    <!-- Leistungsspektrum -->
-    <section class="section section-gray">
-        <div class="container">
-            <h2 class="section-title">Unser Leistungsspektrum</h2>
-            
-            <div class="grid grid-3">
-                <div class="card">
-                    <div class="card-icon">🛁</div>
-                    <h3>Komplettbadsanierung</h3>
-                    <p>Vom Rückbau bis zur Endreinigung – wir übernehmen alles. Sie haben nur einen Ansprechpartner.</p>
-                    <ul class="feature-list">
-                        <li>Kompletter Rückbau</li>
-                        <li>Neue Fliesen & Sanitärobjekte</li>
-                        <li>Elektrik & Beleuchtung</li>
-                        <li>Abnahme & Endreinigung</li>
-                    </ul>
-                </div>
-                
-                <div class="card">
-                    <div class="card-icon">🚿</div>
-                    <h3>Teilsanierung</h3>
-                    <p>Neue Dusche, frische Fliesen oder moderne Armaturen – auch Teilsanierungen setzen wir professionell um.</p>
-                    <ul class="feature-list">
-                        <li>Duscherneuerung</li>
-                        <li>Fliesenaustausch</li>
-                        <li>Sanitärobjekte erneuern</li>
-                        <li>Armaturen modernisieren</li>
-                    </ul>
-                </div>
-                
-                <div class="card">
-                    <div class="card-icon">♿</div>
-                    <h3>Barrierefreies Bad</h3>
-                    <p>Komfort und Sicherheit für alle Lebenslagen – wir planen barrierefrei mit Stil.</p>
-                    <ul class="feature-list">
-                        <li>Bodengleiche Duschen</li>
-                        <li>Rutschfeste Fliesen</li>
-                        <li>Haltegriffe & Stützfunktionen</li>
-                        <li>Unterfahrbare Waschtische</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+<div style="background:#F5F5F5;padding:80px 0">
+<div class="containerbig">
+<h3 class="cmsText-3xl" style="text-align:center;margin-bottom:50px">Unser Leistungsspektrum</h3>
+<div class="grid-3">
+<div class="card">
+<div style="font-size:60px;margin-bottom:20px">🛁</div>
+<h4>Komplettbadsanierung</h4>
+<p>Vom Rückbau bis zur Endreinigung – wir übernehmen alles. Sie haben nur einen Ansprechpartner.</p>
+</div>
+<div class="card">
+<div style="font-size:60px;margin-bottom:20px">🚿</div>
+<h4>Teilsanierung</h4>
+<p>Neue Dusche, frische Fliesen oder moderne Armaturen – auch Teilsanierungen setzen wir professionell um.</p>
+</div>
+<div class="card">
+<div style="font-size:60px;margin-bottom:20px">♿</div>
+<h4>Barrierefreies Bad</h4>
+<p>Komfort und Sicherheit für alle Lebenslagen – wir planen barrierefrei mit Stil.</p>
+</div>
+</div>
+</div>
+</div>
 
-    <!-- Was uns besonders macht -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Was uns besonders macht</h2>
-            
-            <div class="grid grid-2">
-                <div class="usp-box">
-                    <div class="usp-icon">✓</div>
-                    <div class="usp-content">
-                        <h4>Alles aus einer Hand</h4>
-                        <p>Ein Partner für Planung, Installation, Fliesen, Elektrik und Sanitär.</p>
-                    </div>
-                </div>
-                <div class="usp-box">
-                    <div class="usp-icon">✓</div>
-                    <div class="usp-content">
-                        <h4>Saubere Baustelle</h4>
-                        <p>Wir achten auf Ordnung – täglich. Nach uns bleibt nur Ihr neues Bad.</p>
-                    </div>
-                </div>
-                <div class="usp-box">
-                    <div class="usp-icon">✓</div>
-                    <div class="usp-content">
-                        <h4>Transparente Kosten</h4>
-                        <p>Klare Angebote, keine versteckten Kosten, keine bösen Überraschungen.</p>
-                    </div>
-                </div>
-                <div class="usp-box">
-                    <div class="usp-icon">✓</div>
-                    <div class="usp-content">
-                        <h4>Erfahrene Meister</h4>
-                        <p>Zwei Meister mit über 15 Jahren Know-how – Qualität, auf die Sie sich verlassen können.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="section">
+<div class="containerbig">
+<h3 class="cmsText-3xl" style="text-align:center;margin-bottom:50px">Was uns besonders macht</h3>
+<div class="grid-2">
+<div style="display:flex;align-items:flex-start;gap:20px">
+<div style="font-size:48px;color:#FFD500">✅</div>
+<div><strong>Alles aus einer Hand</strong><br>Ein Partner für Planung, Installation, Fliesen, Elektrik und Sanitär.</div>
+</div>
+<div style="display:flex;align-items:flex-start;gap:20px">
+<div style="font-size:48px;color:#FFD500">✅</div>
+<div><strong>Saubere Baustelle</strong><br>Wir achten auf Ordnung – täglich. Nach uns bleibt nur Ihr neues Bad.</div>
+</div>
+<div style="display:flex;align-items:flex-start;gap:20px">
+<div style="font-size:48px;color:#FFD500">✅</div>
+<div><strong>Transparente Kosten</strong><br>Klare Angebote, keine versteckten Kosten, keine bösen Überraschungen.</div>
+</div>
+<div style="display:flex;align-items:flex-start;gap:20px">
+<div style="font-size:48px;color:#FFD500">✅</div>
+<div><strong>Erfahrene Meister</strong><br>Zwei Meister mit über 15 Jahren Know-how – Qualität, auf die Sie sich verlassen können.</div>
+</div>
+</div>
+</div>
+</div>
 
-    <!-- Ablauf -->
-    <section class="section section-gray">
-        <div class="container">
-            <h2 class="section-title">So läuft Ihre Badsanierung ab</h2>
-            
-            <div class="grid grid-2">
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-number">1</div>
-                        <h4>Beratung & Planung</h4>
-                        <p>Wir hören zu, planen mit Ihnen und entwickeln Ihr Traumbad.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-number">2</div>
-                        <h4>Angebot</h4>
-                        <p>Sie erhalten ein transparentes, detailliertes Angebot.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-number">3</div>
-                        <h4>Umsetzung</h4>
-                        <p>Professionelle Montage – sauber, termingerecht, stressfrei.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-number">4</div>
-                        <h4>Abnahme</h4>
-                        <p>Gemeinsam prüfen wir jedes Detail. Erst wenn Sie zufrieden sind, sind wir es auch.</p>
-                    </div>
-                </div>
-                
-                <div style="display: flex; align-items: center; justify-content: center; background: var(--gray); border-radius: 8px; padding: 3rem;">
-                    <div style="text-align: center;">
-                        <div style="font-size: 5rem; margin-bottom: 1rem;">🛁</div>
-                        <h3>Ihr Traumbad wartet</h3>
-                        <p>Von der ersten Skizze bis zur fertigen Wohlfühloase.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div style="background:#FFD500;padding:80px 0">
+<div class="containerbig">
+<h3 class="cmsText-3xl" style="text-align:center;margin-bottom:50px">Unser Ablauf</h3>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:30px">
+<div style="text-align:center">
+<div style="font-size:48px;color:#E30613;font-weight:700;margin-bottom:10px">1</div>
+<h4>Beratung & Planung</h4>
+<p>Wir hören zu, planen mit Ihnen und entwickeln Ihr Traumbad.</p>
+</div>
+<div style="text-align:center">
+<div style="font-size:48px;color:#E30613;font-weight:700;margin-bottom:10px">2</div>
+<h4>Angebot</h4>
+<p>Sie erhalten ein transparentes, detailliertes Angebot.</p>
+</div>
+<div style="text-align:center">
+<div style="font-size:48px;color:#E30613;font-weight:700;margin-bottom:10px">3</div>
+<h4>Umsetzung</h4>
+<p>Professionelle Montage – sauber, termingerecht, stressfrei.</p>
+</div>
+<div style="text-align:center">
+<div style="font-size:48px;color:#E30613;font-weight:700;margin-bottom:10px">4</div>
+<h4>Abnahme</h4>
+<p>Gemeinsam prüfen wir jedes Detail. Erst wenn Sie zufrieden sind, sind wir es auch.</p>
+</div>
+</div>
+</div>
+</div>
 
-    <!-- CTA Section -->
-    <section class="section section-red cta-section" id="kontakt">
-        <div class="container">
-            <h2>Bereit für Ihr neues Bad?</h2>
-            <p>Lassen Sie sich von unseren Experten beraten – wir finden gemeinsam die perfekte Lösung für Ihr Badezimmer.</p>
-            <div class="cta-buttons">
-                <a href="#kontakt" class="btn btn-secondary">Beratungstermin vereinbaren</a>
-            </div>
-            <p><strong>oder rufen Sie uns an:</strong></p>
-            <a href="tel:+4994218610588" class="phone-link">09421 / 861 05 88</a>
-        </div>
-    </section>
+<div class="cta-section" id="kontakt">
+<div class="containerbig">
+<h2 class="cmsText-4xl">Bereit für Ihr neues Bad?</h2>
+<p style="font-size:1.2rem;margin:20px 0">Lassen Sie sich beraten und verwirklichen Sie Ihr Traumbad.</p>
+<a href="tel:+4994218610588" class="cta-whitewitharrow">09421 / 861 05 88</a>
+<a href="mailto:info@geiger-cizek.de" class="cta-whitewitharrow">E-Mail schreiben</a>
+</div>
+</div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div>
-                    <h4>Geiger & Cizek</h4>
-                    <p>Ihr Meisterbetrieb für Heizung, Sanitär und Klimatechnik in Straubing und Umgebung.</p>
-                </div>
-                <div>
-                    <h4>Leistungen</h4>
-                    <ul class="footer-links">
-                        <li><a href="heizungsbau.html">Heizungsbau</a></li>
-                        <li><a href="kaminoefen.html">Kaminöfen</a></li>
-                        <li><a href="badsanierung.html">Badsanierung</a></li>
-                        <li><a href="klimaanlage.html">Klimaanlage</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Kontakt</h4>
-                    <ul class="footer-links">
-                        <li>Telefon: 09421 / 861 05 88</li>
-                        <li>Straubing, Bayern</li>
-                        <li><a href="ueber-uns.html">Über uns</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Geiger & Cizek – Meisterbetrieb für Heizung, Sanitär und Klimatechnik</p>
-            </div>
-        </div>
-    </footer>
+<footer class="Footer">
+<div class="containerbig">
+<p><strong>Geiger & Cizek GbR</strong><br>Straubing, Bayern</p>
+<p style="margin-top:20px;font-size:0.9rem;color:#666">© 2026 Geiger & Cizek GbR</p>
+</div>
+</footer>
 </body>
 </html>
