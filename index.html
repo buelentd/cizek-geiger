@@ -3,18 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Geiger & Cizek - Ihr zuverlässiger Partner für Heizung, Sanitär und Klimatechnik in Straubing und Umgebung. Meisterbetrieb mit Erfahrung.">
-    <title>Geiger & Cizek - Energie-, Klima- & Haustechnik Straubing</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <title>Geiger & Cizek – Heizung, Sanitär & Klimatechnik Straubing</title>
+    <meta name="description" content="Ihr Meisterbetrieb für Heizung, Sanitär und Klimatechnik in Straubing. Wärmepumpen, Kaminöfen, Badsanierung – mit 10 Jahren Funktionsgarantie.">
     
     <style>
+        /* === RESET & BASE === */
         * {
             margin: 0;
             padding: 0;
@@ -22,771 +15,555 @@
         }
         
         :root {
-            /* Colors - angepasst für Heizung/Wärme-Thema */
-            --background: #ffffff;
-            --foreground: #1a1a1a;
-            --primary: #dc2626;        /* Warmes Rot */
-            --primary-hover: #b91c1c;
-            --primary-foreground: #ffffff;
-            --secondary: #0ea5e9;      /* Blau für Klima */
-            --accent: #10b981;         /* Grün für Nachhaltigkeit */
-            --muted: #f5f5f5;
-            --muted-foreground: #737373;
-            --border: #e5e5e5;
+            /* HS-Straubing Farben */
+            --color-primary: #E30613;
+            --color-secondary: #FFD500;
+            --color-accent: #FF8C00;
+            --color-dark: #1A1A1A;
+            --color-text: #333333;
+            --color-background: #FFFFFF;
+            --color-background-light: #F5F5F5;
+            --color-border: #F0F0F0;
             
             /* Typography */
-            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-            --font-display: 'Outfit', 'Inter', sans-serif;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             
             /* Spacing */
-            --space-1: 0.25rem;
-            --space-2: 0.5rem;
-            --space-3: 0.75rem;
-            --space-4: 1rem;
-            --space-6: 1.5rem;
-            --space-8: 2rem;
-            --space-12: 3rem;
-            --space-16: 4rem;
-            --space-24: 6rem;
-            
-            /* Border Radius */
-            --radius: 0.75rem;
-            --radius-lg: 1rem;
-            --radius-sm: 0.5rem;
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 32px;
+            --space-lg: 64px;
+            --space-xl: 96px;
             
             /* Shadows */
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+            --shadow-small: 0 2px 5px rgba(0,0,0,0.1);
+            --shadow-medium: 0 5px 15px rgba(0,0,0,0.2);
+            --shadow-large: 0 5px 20px rgba(227, 6, 19, 0.2);
         }
         
         body {
-            font-family: var(--font-sans);
-            color: var(--foreground);
-            background: var(--background);
+            font-family: var(--font-family);
+            color: var(--color-text);
+            font-size: 16px;
             line-height: 1.6;
         }
         
         h1, h2, h3, h4, h5, h6 {
-            font-family: var(--font-display);
+            color: var(--color-dark);
             font-weight: 700;
             line-height: 1.2;
-            margin-bottom: var(--space-4);
         }
         
-        h1 { font-size: 2.5rem; }
-        h2 { font-size: 2rem; }
-        h3 { font-size: 1.5rem; }
-        h4 { font-size: 1.25rem; }
+        h1 { font-size: 48px; margin-bottom: 20px; }
+        h2 { font-size: 36px; margin-bottom: 16px; }
+        h3 { font-size: 24px; margin-bottom: 12px; }
         
-        @media (min-width: 1024px) {
-            h1 { font-size: 3.75rem; }
-            h2 { font-size: 2.5rem; }
-            h3 { font-size: 1.875rem; }
-        }
+        p { margin-bottom: 16px; }
         
         .container {
-            width: 100%;
-            max-width: 1280px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1rem;
+            padding: 0 20px;
         }
         
-        @media (min-width: 640px) {
-            .container { padding: 0 2rem; }
-        }
-        
-        @media (min-width: 1024px) {
-            .container { padding: 0 3rem; }
-        }
-        
-        /* Header */
-        header {
-            position: sticky;
-            top: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-            z-index: 50;
-            padding: var(--space-4) 0;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-        }
-        
-        nav {
-            display: none;
-            gap: var(--space-8);
-        }
-        
-        @media (min-width: 1024px) {
-            nav { display: flex; }
-        }
-        
-        nav a {
-            color: var(--foreground);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 150ms ease-out;
-        }
-        
-        nav a:hover {
-            color: var(--primary);
-        }
-        
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-2);
-            padding: 0.75rem 1.5rem;
-            border-radius: var(--radius);
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 150ms ease-out;
-            cursor: pointer;
-            border: none;
-            font-size: 1rem;
-        }
-        
+        /* === BUTTONS === */
         .btn-primary {
-            background: var(--primary);
-            color: var(--primary-foreground);
+            display: inline-block;
+            background: var(--color-primary);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
         }
         
         .btn-primary:hover {
-            background: var(--primary-hover);
+            background: #B50510;
+            box-shadow: var(--shadow-large);
             transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
         }
         
         .btn-secondary {
-            background: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
+            background: white;
+            color: var(--color-primary);
+            border: 2px solid white;
         }
         
         .btn-secondary:hover {
-            background: var(--primary);
-            color: var(--primary-foreground);
+            background: rgba(255,255,255,0.9);
         }
         
-        /* Hero Section */
+        /* === NAVIGATION === */
+        nav {
+            background: white;
+            box-shadow: var(--shadow-small);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+        }
+        
+        nav .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--color-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--color-primary);
+        }
+        
+        /* === HERO SECTION === */
         .hero {
-            padding: var(--space-24) 0;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1600') center/cover;
+            color: white;
             text-align: center;
-        }
-        
-        @media (min-width: 1024px) {
-            .hero {
-                padding: 6rem 0;
-            }
+            padding: 120px 20px;
         }
         
         .hero h1 {
-            max-width: 900px;
-            margin: 0 auto var(--space-6);
+            color: white;
+            font-size: 56px;
+            margin-bottom: 24px;
         }
         
         .hero p {
+            font-size: 20px;
+            margin-bottom: 32px;
             max-width: 700px;
-            margin: 0 auto var(--space-8);
-            font-size: 1.125rem;
-            color: var(--muted-foreground);
+            margin-left: auto;
+            margin-right: auto;
         }
         
-        /* Section */
-        .section {
-            padding: var(--space-16) 0;
+        /* === SECTIONS === */
+        section {
+            padding: 80px 20px;
         }
         
-        @media (min-width: 1024px) {
-            .section {
-                padding: var(--space-24) 0;
-            }
+        .section-white {
+            background: white;
         }
         
-        .section-header {
+        .section-light {
+            background: var(--color-background-light);
+        }
+        
+        .section-dark {
+            background: var(--color-dark);
+            color: white;
+        }
+        
+        .section-dark h2,
+        .section-dark h3 {
+            color: white;
+        }
+        
+        .section-primary {
+            background: var(--color-primary);
+            color: white;
+        }
+        
+        .section-primary h2 {
+            color: white;
+        }
+        
+        .section-title {
             text-align: center;
-            max-width: 800px;
-            margin: 0 auto var(--space-12);
+            margin-bottom: 50px;
         }
         
-        .section-header h2 {
-            margin-bottom: var(--space-4);
-        }
-        
-        .section-header p {
-            font-size: 1.125rem;
-            color: var(--muted-foreground);
-        }
-        
-        /* Grid */
+        /* === GRID === */
         .grid {
             display: grid;
-            gap: var(--space-8);
+            gap: 40px;
         }
         
-        @media (min-width: 640px) {
-            .grid-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-4 { grid-template-columns: repeat(4, 1fr); }
+        
+        @media (max-width: 1024px) {
+            .grid-3 { grid-template-columns: repeat(2, 1fr); }
+            .grid-4 { grid-template-columns: repeat(2, 1fr); }
         }
         
-        @media (min-width: 1024px) {
-            .grid-3 { grid-template-columns: repeat(3, 1fr); }
-            .grid-4 { grid-template-columns: repeat(4, 1fr); }
-            .grid-5 { grid-template-columns: repeat(5, 1fr); }
+        @media (max-width: 768px) {
+            .grid-2,
+            .grid-3,
+            .grid-4 { grid-template-columns: 1fr; }
+            
+            .hero h1 { font-size: 36px; }
+            h2 { font-size: 28px; }
         }
         
-        /* Card */
+        /* === CARDS === */
         .card {
-            background: var(--background);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: var(--space-8);
+            background: white;
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-small);
+            transition: all 0.3s;
             text-align: center;
-            transition: all 200ms ease-out;
         }
         
         .card:hover {
-            box-shadow: var(--shadow-lg);
+            box-shadow: var(--shadow-medium);
             transform: translateY(-4px);
         }
         
-        .icon-box {
-            width: 4rem;
-            height: 4rem;
-            background: var(--muted);
-            border-radius: var(--radius);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto var(--space-4);
-            color: var(--primary);
+        .card-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--color-primary);
         }
         
         .card h3 {
-            margin-bottom: var(--space-3);
-            font-size: 1.25rem;
+            margin-bottom: 12px;
         }
         
-        .card p {
-            color: var(--muted-foreground);
-            line-height: 1.6;
-        }
-        
-        /* Stats */
-        .stat-card {
-            text-align: center;
-            padding: var(--space-8);
-        }
-        
-        .stat-number {
-            font-family: var(--font-display);
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: var(--space-2);
-        }
-        
-        .stat-label {
-            font-size: 1rem;
+        .card a {
+            display: inline-block;
+            margin-top: 16px;
+            color: var(--color-primary);
             font-weight: 600;
-            color: var(--foreground);
-            margin-bottom: var(--space-2);
+            text-decoration: none;
         }
         
-        .stat-description {
-            font-size: 0.875rem;
-            color: var(--muted-foreground);
+        .card a:hover {
+            text-decoration: underline;
         }
         
-        /* Testimonials */
-        .testimonial {
-            background: var(--muted);
-            border-radius: var(--radius-lg);
-            padding: var(--space-8);
-        }
-        
-        .testimonial-quote {
-            font-size: 1.125rem;
-            line-height: 1.8;
-            margin-bottom: var(--space-4);
-            font-style: italic;
-        }
-        
-        .testimonial-author {
-            font-weight: 600;
-            color: var(--foreground);
-        }
-        
-        /* Value List */
-        .value-list {
+        /* === USP BOXES === */
+        .usp-box {
             display: flex;
-            flex-direction: column;
-            gap: var(--space-6);
-        }
-        
-        .value-item {
-            display: flex;
-            gap: var(--space-4);
             align-items: flex-start;
+            gap: 16px;
         }
         
-        .value-icon {
-            width: 2.5rem;
-            height: 2.5rem;
-            background: var(--primary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .usp-icon {
+            font-size: 32px;
+            color: var(--color-secondary);
             flex-shrink: 0;
         }
         
-        .value-content h4 {
-            margin-bottom: var(--space-2);
+        .usp-content h3 {
+            margin-bottom: 8px;
         }
         
-        .value-content p {
-            color: var(--muted-foreground);
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--primary) 0%, #991b1b 100%);
-            color: white;
+        /* === STATS === */
+        .stat {
             text-align: center;
-            padding: var(--space-24) 0;
-            border-radius: var(--radius-lg);
-            margin: var(--space-16) 0;
         }
         
-        .cta-section h2 {
-            color: white;
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--color-secondary);
+            margin-bottom: 8px;
         }
         
-        .cta-section p {
-            max-width: 700px;
-            margin: 0 auto var(--space-8);
-            font-size: 1.125rem;
-            opacity: 0.95;
+        .stat-label {
+            font-size: 16px;
         }
         
-        .cta-section .btn-primary {
-            background: white;
-            color: var(--primary);
-        }
-        
-        .cta-section .btn-primary:hover {
-            background: var(--muted);
-        }
-        
-        /* Footer */
+        /* === FOOTER === */
         footer {
-            background: var(--foreground);
+            background: var(--color-dark);
             color: white;
-            padding: var(--space-16) 0 var(--space-8);
-            margin-top: var(--space-24);
+            padding: 60px 20px 20px;
         }
         
-        .footer-content {
-            display: grid;
-            gap: var(--space-8);
-            margin-bottom: var(--space-8);
+        footer h3 {
+            color: var(--color-secondary);
+            margin-bottom: 20px;
         }
         
-        @media (min-width: 1024px) {
-            .footer-content {
-                grid-template-columns: 2fr 1fr 1fr 1fr;
-            }
-        }
-        
-        .footer-section h4 {
+        footer a {
             color: white;
-            margin-bottom: var(--space-4);
-        }
-        
-        .footer-section p,
-        .footer-section a {
-            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
-            display: block;
-            margin-bottom: var(--space-2);
         }
         
-        .footer-section a:hover {
-            color: white;
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        footer ul {
+            list-style: none;
+        }
+        
+        footer li {
+            margin-bottom: 8px;
         }
         
         .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: var(--space-8);
             text-align: center;
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 0.875rem;
-        }
-        
-        /* Animations */
-        .fade-in {
-            animation: fadeIn 600ms ease-out;
-        }
-        
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #999;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
+    <!-- Navigation -->
+    <nav>
         <div class="container">
-            <div class="header-content">
-                <a href="#" class="logo">Geiger & Cizek</a>
-                <nav>
-                    <a href="#leistungen">Leistungen</a>
-                    <a href="#ueber-uns">Über uns</a>
-                    <a href="#referenzen">Referenzen</a>
-                    <a href="#kontakt">Kontakt</a>
-                </nav>
-                <a href="tel:+4994218610588" class="btn btn-primary">
-                    <i data-lucide="phone" style="width: 20px; height: 20px;"></i>
-                    Jetzt anrufen
-                </a>
-            </div>
+            <a href="/" class="logo">Geiger & Cizek</a>
+            <ul>
+                <li><a href="#leistungen">Leistungen</a></li>
+                <li><a href="#ueber-uns">Über uns</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="hero fade-in">
+    <section class="hero">
         <div class="container">
             <h1>Wir schaffen Wärme, die bleibt – heute und in Zukunft</h1>
-            <p>Ob Eigenheim, Gewerbe oder Neubau – die richtige Heiz- und Haustechnik entscheidet über Komfort, Energieeffizienz und Nachhaltigkeit. Mit Karl Geiger und Florian Cizek haben Sie es mit zwei erfahrenen Meistern im Bereich Heizung/Lüftung/Sanitär zu tun. Unser Anspruch: Technik, die nicht nur funktioniert, sondern begeistert.</p>
-            <a href="#kontakt" class="btn btn-primary">Beratung vereinbaren</a>
+            <p>Ihr zuverlässiger Partner für Heizung, Sanitär und Klimatechnik in Straubing und Umgebung.</p>
+            <a href="#kontakt" class="btn-primary">Jetzt Beratung vereinbaren</a>
         </div>
     </section>
 
-    <!-- Über uns -->
-    <section class="section" style="background: var(--muted);">
+    <!-- Wer wir sind -->
+    <section class="section-white">
         <div class="container">
-            <div class="section-header">
-                <p>Um das tagtäglich für unsere Kundschaft zu erreichen, setzen wir auf Beratung mit System. Geiger & Cizek begleitet Sie von der ersten Idee bis zur perfekten Lösung. Wir hören zu, planen mit Ihnen und setzen professionell um – sauber, effizient und transparent. Jede Lösung wird individuell konzipiert und nahtlos integriert. Unsere Devise: Sie kümmern sich um den Alltag – wir um Ihre perfekte Haustechnik.</p>
+            <div class="section-title">
+                <h2>Zwei Meister. Ein Team. Ihre Zukunft.</h2>
             </div>
-        </div>
-    </section>
-
-    <!-- Versprechen -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Unser Versprechen: Ihr zuverlässiger Partner für Heizung, Sanitär und Klimatechnik</h2>
-            </div>
+            <p style="max-width: 800px; margin: 0 auto; text-align: center;">
+                Mit Karl Geiger und Florian Cizek haben Sie es mit zwei erfahrenen Meistern im Bereich Heizung, Lüftung und Sanitär zu tun. Unterstützt von einem motivierten, hochqualifizierten Team sorgen wir für Lösungen, die überzeugen – in Straubing, Landshut, München, Passau und Umgebung.
+            </p>
+            <p style="max-width: 800px; margin: 24px auto 0; text-align: center;">
+                Unser Anspruch: Beratung mit System. Wir hören zu, planen mit Ihnen und setzen professionell um – sauber, effizient und transparent.
+            </p>
         </div>
     </section>
 
     <!-- Leistungen -->
-    <section id="leistungen" class="section" style="background: var(--muted);">
+    <section id="leistungen" class="section-light">
         <div class="container">
-            <div class="section-header">
-                <h2>Wege zu mehr Komfort und Energieeffizienz</h2>
-                <p>Unsere Leistungen im Überblick</p>
+            <div class="section-title">
+                <h2>Alles aus einer Hand – von der Heizung bis zur Klimaanlage</h2>
             </div>
-            <div class="grid grid-3 grid-5">
+            <div class="grid grid-3">
                 <div class="card">
-                    <div class="icon-box">
-                        <i data-lucide="flame" style="width: 32px; height: 32px;"></i>
-                    </div>
+                    <div class="card-icon">🔥</div>
                     <h3>Heizungsbau</h3>
-                    <p>Moderne Heizsysteme, Wärmepumpen, Gas- und Ölheizungen</p>
+                    <p>Moderne Heizsysteme für Straubing, Regensburg, Deggendorf und Bogen – von der Wärmepumpe bis zur klassischen Gasheizung.</p>
+                    <a href="heizungsbau.html">Mehr erfahren →</a>
                 </div>
+                
                 <div class="card">
-                    <div class="icon-box">
-                        <i data-lucide="fire" style="width: 32px; height: 32px;"></i>
-                    </div>
+                    <div class="card-icon">🌱</div>
+                    <h3>Wärmepumpe</h3>
+                    <p>Effizient heizen und kühlen mit umweltfreundlicher Technologie – für Ihr Zuhause oder Büro.</p>
+                    <a href="#">Mehr erfahren →</a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🔥</div>
                     <h3>Kaminöfen</h3>
-                    <p>Beratung, Verkauf, Installation und Wartung</p>
+                    <p>Pellet- oder Scheitholz-Kaminöfen in vielen Ausführungen – Wärme, die Sie spüren und sehen.</p>
+                    <a href="kaminoefen.html">Mehr erfahren →</a>
                 </div>
+                
                 <div class="card">
-                    <div class="icon-box">
-                        <i data-lucide="bath" style="width: 32px; height: 32px;"></i>
-                    </div>
+                    <div class="card-icon">🚿</div>
                     <h3>Badsanierung</h3>
-                    <p>Komplette Badplanung und barrierefreie Bäder</p>
+                    <p>Vom ersten Entwurf bis zur fertigen Wohlfühloase – alles aus einer Hand.</p>
+                    <a href="badsanierung.html">Mehr erfahren →</a>
                 </div>
+                
                 <div class="card">
-                    <div class="icon-box">
-                        <i data-lucide="wind" style="width: 32px; height: 32px;"></i>
-                    </div>
+                    <div class="card-icon">💨</div>
                     <h3>Lüftung & Wasser</h3>
-                    <p>Lüftungsanlagen und Wasseraufbereitung</p>
+                    <p>Frische Luft und sauberes Wasser – moderne Lüftungsanlagen und Wasseraufbereitung.</p>
+                    <a href="#">Mehr erfahren →</a>
                 </div>
+                
                 <div class="card">
-                    <div class="icon-box">
-                        <i data-lucide="snowflake" style="width: 32px; height: 32px;"></i>
-                    </div>
-                    <h3>Klimaanlage</h3>
-                    <p>Split-Klimageräte und Multi-Split-Anlagen</p>
+                    <div class="card-icon">❄️</div>
+                    <h3>Klimaanlagen</h3>
+                    <p>Split- und Multisplit-Klimaanlagen für perfektes Raumklima – energieeffizient und leise.</p>
+                    <a href="klimaanlage.html">Mehr erfahren →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Was uns besonders macht -->
-    <section class="section">
+    <!-- USPs -->
+    <section class="section-white">
         <div class="container">
-            <div class="section-header">
-                <h2>Lösungen, die überzeugen – für Menschen und Räume</h2>
-                <p>Was Geiger & Cizek besonders macht</p>
+            <div class="section-title">
+                <h2>Warum Geiger & Cizek?</h2>
             </div>
-            <div class="grid grid-2 grid-3">
-                <div class="card">
-                    <div class="icon-box">
-                        <i data-lucide="award" style="width: 32px; height: 32px;"></i>
+            <div class="grid grid-2">
+                <div class="usp-box">
+                    <div class="usp-icon">✓</div>
+                    <div class="usp-content">
+                        <h3>Meisterbetrieb mit Erfahrung</h3>
+                        <p>Zwei erfahrene Meister mit über 15 Jahren Know-how – Sie profitieren von echter Handwerkskunst.</p>
                     </div>
-                    <h3>Meisterbetrieb</h3>
-                    <p>Zwei erfahrene Meister mit fundierter Ausbildung und jahrelanger Praxis</p>
                 </div>
-                <div class="card">
-                    <div class="icon-box">
-                        <i data-lucide="handshake" style="width: 32px; height: 32px;"></i>
+                
+                <div class="usp-box">
+                    <div class="usp-icon">✓</div>
+                    <div class="usp-content">
+                        <h3>Alles aus einer Hand</h3>
+                        <p>Von der Beratung über die Planung bis zur Installation und Wartung – wir begleiten Sie durchgehend.</p>
                     </div>
-                    <h3>Alles aus einer Hand</h3>
-                    <p>Beratung, Planung, Installation und Wartung – wir begleiten Sie durch jeden Schritt</p>
                 </div>
-                <div class="card">
-                    <div class="icon-box">
-                        <i data-lucide="map-pin" style="width: 32px; height: 32px;"></i>
+                
+                <div class="usp-box">
+                    <div class="usp-icon">✓</div>
+                    <div class="usp-content">
+                        <h3>Regional verwurzelt</h3>
+                        <p>Straubing, Landshut, München, Passau – wir sind vor Ort und kennen die Region.</p>
                     </div>
-                    <h3>Regional verwurzelt</h3>
-                    <p>In Straubing zu Hause, in der Region bekannt – schnell vor Ort</p>
                 </div>
-                <div class="card">
-                    <div class="icon-box">
-                        <i data-lucide="euro" style="width: 32px; height: 32px;"></i>
+                
+                <div class="usp-box">
+                    <div class="usp-icon">✓</div>
+                    <div class="usp-content">
+                        <h3>10 Jahre Funktionsgarantie</h3>
+                        <p>Maximale Sicherheit für Ihre Heizungsanlage – ohne versteckte Kosten.</p>
                     </div>
-                    <h3>Transparente Kosten</h3>
-                    <p>Klare Angebote ohne versteckte Kosten – ehrlich und nachvollziehbar</p>
                 </div>
-                <div class="card">
-                    <div class="icon-box">
-                        <i data-lucide="sparkles" style="width: 32px; height: 32px;"></i>
+                
+                <div class="usp-box">
+                    <div class="usp-icon">✓</div>
+                    <div class="usp-content">
+                        <h3>Saubere Arbeit</h3>
+                        <p>Nach uns bleibt kein Staub, nur gute Luft – wir achten auf Ordnung und Sauberkeit.</p>
                     </div>
-                    <h3>Saubere Umsetzung</h3>
-                    <p>Wir sorgen dafür, dass Sie sich wohlfühlen – nach uns bleibt kein Staub</p>
                 </div>
-                <div class="card">
-                    <div class="icon-box">
-                        <i data-lucide="zap" style="width: 32px; height: 32px;"></i>
+                
+                <div class="usp-box">
+                    <div class="usp-icon">✓</div>
+                    <div class="usp-content">
+                        <h3>Transparente Kosten</h3>
+                        <p>Klare Angebote ohne böse Überraschungen – Sie wissen immer, woran Sie sind.</p>
                     </div>
-                    <h3>Schnelle Reaktion</h3>
-                    <p>Wir beantworten Anfragen innerhalb von 48 Stunden</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Zahlen -->
-    <section class="section" style="background: var(--muted);">
+    <!-- Stats -->
+    <section class="section-dark">
         <div class="container">
-            <div class="section-header">
-                <h2>Stark verwurzelt in Straubing – bestens vernetzt in der Technik</h2>
-                <p>Geiger & Cizek in Zahlen</p>
-            </div>
-            <div class="grid grid-2 grid-4">
-                <div class="stat-card">
-                    <div class="stat-number">25+</div>
+            <div class="grid grid-4">
+                <div class="stat">
+                    <div class="stat-number">15+</div>
                     <div class="stat-label">Jahre Erfahrung</div>
-                    <p class="stat-description">Zuverlässiger Ansprechpartner für private und gewerbliche Kundschaft in Straubing und Umgebung</p>
+                    <p style="font-size: 14px; margin-top: 8px;">Seit 2010 Ihr zuverlässiger Partner für Heizung, Sanitär und Klimatechnik.</p>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">1000+</div>
+                
+                <div class="stat">
+                    <div class="stat-number">1.200+</div>
                     <div class="stat-label">Zufriedene Kunden</div>
-                    <p class="stat-description">Ihre Zufriedenheit ist unser Maßstab. Wir nehmen uns Zeit für Ihre Anliegen</p>
+                    <p style="font-size: 14px; margin-top: 8px;">Ihre Zufriedenheit ist unser Maßstab – in Straubing und Umgebung.</p>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">48</div>
-                    <div class="stat-label">Stunden Reaktionszeit</div>
-                    <p class="stat-description">Ihr Anliegen ist unser Anliegen. Wir beantworten Anfragen schnell</p>
+                
+                <div class="stat">
+                    <div class="stat-number">48h</div>
+                    <div class="stat-label">Reaktionszeit</div>
+                    <p style="font-size: 14px; margin-top: 8px;">Ihre Anfrage ist unser Anliegen – wir antworten in maximal zwei Tagen.</p>
                 </div>
-                <div class="stat-card">
+                
+                <div class="stat">
                     <div class="stat-number">100%</div>
                     <div class="stat-label">Transparenz</div>
-                    <p class="stat-description">Klare Angebote ohne versteckte Kosten – ehrlich und nachvollziehbar</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Service -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Service, der überzeugt</h2>
-                <p>Bei Geiger & Cizek bedeutet Service mehr als nur ein Häkchen auf der To-do-Liste. Wir verstehen uns als Partner, der Sie von Anfang an begleitet – persönlich, zuverlässig und mit Liebe zum Detail.</p>
-                <p>Wir starten mit einer individuellen Beratung und entwickeln daraus eine präzise, zukunftssichere Planung. Unsere Montageteams setzen Ihr Projekt sauber und effizient um, während regelmäßige Wartungen für dauerhafte Effizienz sorgen. Damit Sie Ihre Technik sofort nutzen können, erhalten Sie eine verständliche Einweisung – und falls doch Fragen bleiben, ist unser Support jederzeit für Sie da.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Werte -->
-    <section class="section" style="background: var(--muted);">
-        <div class="container">
-            <div class="section-header">
-                <h2>Bei uns zählt nicht nur die Technik, sondern auch das Miteinander</h2>
-                <p>Unsere Werte</p>
-            </div>
-            <div class="grid grid-2" style="max-width: 900px; margin: 0 auto;">
-                <div class="value-item">
-                    <div class="value-icon">
-                        <i data-lucide="check" style="width: 20px; height: 20px;"></i>
-                    </div>
-                    <div class="value-content">
-                        <h4>Kompetenz</h4>
-                        <p>Erfahrung und Expertise, die überzeugen</p>
-                    </div>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">
-                        <i data-lucide="check" style="width: 20px; height: 20px;"></i>
-                    </div>
-                    <div class="value-content">
-                        <h4>Zuverlässigkeit</h4>
-                        <p>Wir halten, was wir versprechen</p>
-                    </div>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">
-                        <i data-lucide="check" style="width: 20px; height: 20px;"></i>
-                    </div>
-                    <div class="value-content">
-                        <h4>Innovation</h4>
-                        <p>Wir gehen mit der Technik, nicht hinterher</p>
-                    </div>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">
-                        <i data-lucide="check" style="width: 20px; height: 20px;"></i>
-                    </div>
-                    <div class="value-content">
-                        <h4>Kundenzufriedenheit</h4>
-                        <p>Ihre Zufriedenheit ist unser Maßstab</p>
-                    </div>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">
-                        <i data-lucide="check" style="width: 20px; height: 20px;"></i>
-                    </div>
-                    <div class="value-content">
-                        <h4>Teamgeist</h4>
-                        <p>Weil gute Arbeit im Team beginnt</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="referenzen" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Das sagen unsere Kunden</h2>
-            </div>
-            <div class="grid grid-2 grid-3">
-                <div class="testimonial">
-                    <p class="testimonial-quote">"Die Firma Geiger & Cizek hat bei uns eine neue Heizung eingebaut. Vom ersten Kontakt über Beratung, Angebot bis zur Montage lief alles sehr professionell und sauber."</p>
-                    <p class="testimonial-author">Max Mustermann</p>
-                </div>
-                <div class="testimonial">
-                    <p class="testimonial-quote">"Kompetente Beratung, saubere Arbeit und faire Preise. Wir sind sehr zufrieden mit unserer neuen Badsanierung. Absolut empfehlenswert!"</p>
-                    <p class="testimonial-author">Maria Schmidt</p>
-                </div>
-                <div class="testimonial">
-                    <p class="testimonial-quote">"Schnelle Reaktion bei einem Heizungsausfall. Das Team war innerhalb von 24h vor Ort und hat das Problem kompetent gelöst. Top Service!"</p>
-                    <p class="testimonial-author">Thomas Bauer</p>
+                    <p style="font-size: 14px; margin-top: 8px;">Klare Angebote, ehrliche Kommunikation, keine versteckten Kosten.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section class="section">
-        <div class="container">
-            <div class="cta-section">
-                <h2>Zeit für ein neues Wohngefühl</h2>
-                <p>Wohlige Wärme, modernes Bad, effiziente Technik – das ist Komfort, der bleibt. Gemeinsam mit Ihnen entwickeln wir Lösungen, die heute überzeugen und morgen noch Bestand haben. Starten Sie jetzt in eine energieeffiziente Zukunft.</p>
-                <a href="#kontakt" class="btn btn-primary">Jetzt Kontakt aufnehmen</a>
-            </div>
+    <section id="kontakt" class="section-primary">
+        <div class="container" style="text-align: center;">
+            <h2>Bereit für Ihr nächstes Projekt?</h2>
+            <p style="font-size: 18px; margin-bottom: 32px;">
+                Egal ob Heizungsbau, Kaminöfen oder eine komplette Badsanierung – wir finden stets die beste Lösung für Ihre Immobilie.
+            </p>
+            <a href="tel:+4994218610588" class="btn-secondary" style="margin-right: 16px;">09421 / 861 05 88</a>
+            <a href="#" class="btn-secondary">Zum Kontaktformular</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="kontakt">
+    <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Geiger & Cizek</h4>
-                    <p>Ihr zuverlässiger Partner für Heizung, Sanitär und Klimatechnik in Straubing und Umgebung.</p>
+            <div class="grid grid-3">
+                <div>
+                    <h3>Kontakt</h3>
+                    <p>
+                        Geiger & Cizek<br>
+                        Arndt-Sallinger-Str. 5<br>
+                        94315 Straubing
+                    </p>
+                    <p>
+                        Tel: <a href="tel:+4994218610588">09421 / 861 05 88</a><br>
+                        Mobil: <a href="tel:+49160948770 67">0160 / 948 770 67</a><br>
+                        E-Mail: <a href="mailto:info@hs-straubing.de">info@hs-straubing.de</a>
+                    </p>
                 </div>
-                <div class="footer-section">
-                    <h4>Kontakt</h4>
-                    <a href="tel:+4994218610588">09421 / 861 05 88</a>
-                    <a href="mailto:info@hs-straubing.de">info@hs-straubing.de</a>
+                
+                <div>
+                    <h3>Leistungen</h3>
+                    <ul>
+                        <li><a href="heizungsbau.html">Heizungsbau</a></li>
+                        <li><a href="#">Wärmepumpe</a></li>
+                        <li><a href="kaminoefen.html">Kaminöfen</a></li>
+                        <li><a href="badsanierung.html">Badsanierung</a></li>
+                        <li><a href="klimaanlage.html">Klimaanlage</a></li>
+                        <li><a href="#">Lüftung & Wasser</a></li>
+                    </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Leistungen</h4>
-                    <a href="#leistungen">Heizungsbau</a>
-                    <a href="#leistungen">Kaminöfen</a>
-                    <a href="#leistungen">Badsanierung</a>
-                    <a href="#leistungen">Lüftung & Wasser</a>
-                    <a href="#leistungen">Klimaanlage</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Rechtliches</h4>
-                    <a href="#">Impressum</a>
-                    <a href="#">Datenschutz</a>
+                
+                <div>
+                    <h3>Rechtliches</h3>
+                    <ul>
+                        <li><a href="#">Impressum</a></li>
+                        <li><a href="#">Datenschutz</a></li>
+                        <li><a href="#">Cookie-Richtlinie</a></li>
+                    </ul>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2026 Geiger & Cizek. Alle Rechte vorbehalten.</p>
+                <p>© 2026 Geiger & Cizek – Alle Rechte vorbehalten</p>
             </div>
         </div>
     </footer>
-
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
-        
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
