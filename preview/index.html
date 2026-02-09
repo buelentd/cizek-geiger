@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geiger & Cizek – Heizung, Sanitär & Klimatechnik Straubing</title>
+    <meta name="description" content="Ihr Meisterbetrieb für Heizung, Sanitär und Klimatechnik in Straubing. Wärmepumpen, Kaminöfen, Badsanierung – mit 10 Jahren Funktionsgarantie.">
+    
+    <style>
+        /* === RESET & BASE === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            /* HS-Straubing Farben */
+            --color-primary: #E30613;
+            --color-secondary: #FFD500;
+            --color-accent: #FF8C00;
+            --color-dark: #1A1A1A;
+            --color-text: #333333;
+            --color-background: #FFFFFF;
+            --color-background-light: #F5F5F5;
+            --color-border: #F0F0F0;
+            
+            /* Typography */
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            
+            /* Spacing */
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 32px;
+            --space-lg: 64px;
+            --space-xl: 96px;
+            
+            /* Shadows */
+            --shadow-small: 0 2px 5px rgba(0,0,0,0.1);
+            --shadow-medium: 0 5px 15px rgba(0,0,0,0.2);
+            --shadow-large: 0 5px 20px rgba(227, 6, 19, 0.2);
+        }
+        
+        body {
+            font-family: var(--font-family);
+            color: var(--color-text);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--color-dark);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 48px; margin-bottom: 20px; }
+        h2 { font-size: 36px; margin-bottom: 16px; }
+        h3 { font-size: 24px; margin-bottom: 12px; }
+        
+        p { margin-bottom: 16px; }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* === BUTTONS === */
+        .btn-primary {
+            display: inline-block;
+            background: var(--color-primary);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn-primary:hover {
+            background: #B50510;
+            box-shadow: var(--shadow-large);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--color-primary);
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.9);
+        }
+        
+        /* === NAVIGATION === */
+        nav {
+            background: white;
+            box-shadow: var(--shadow-small);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+        }
+        
+        nav .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--color-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--color-primary);
+        }
+        
+        /* === HERO SECTION === */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1600') center/cover;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+        }
+        
+        .hero h1 {
+            color: white;
+            font-size: 56px;
+            margin-bottom: 24px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 32px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* === SECTIONS === */
+        section {
+            padding: 80px 20px;
+        }
+        
+        .section-white {
+            background: white;
+        }
+        
+        .section-light {
+            background: var(--color-background-light);
+        }
+        
+        .section-dark {
+            background: var(--color-dark);
+            color: white;
+        }
+        
+        .section-dark h2,
+        .section-dark h3 {
+            color: white;
+        }
+        
+        .section-primary {
+            background: var(--color-primary);
+            color: white;
+        }
+        
+        .section-primary h2 {
+            color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        /* === GRID === */
+        .grid {
+            display: grid;
+            gap: 40px;
+        }
+        
+        .grid-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-4 { grid-template-columns: repeat(4, 1fr); }
+        
+        @media (max-width: 1024px) {
+            .grid-3 { grid-template-columns: repeat(2, 1fr); }
+            .grid-4 { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 768px) {
+            .grid-2,
+            .grid-3,
+            .grid-4 { grid-template-columns: 1fr; }
+            
+            .hero h1 { font-size: 36px; }
+            h2 { font-size: 28px; }
+        }
+        
+        /* === CARDS === */
+        .card {
+            background: white;
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-small);
+            transition: all 0.3s;
+            text-align: center;
+        }
+        
+        .card:hover {
+            box-shadow: var(--shadow-medium);
+            transform: translateY(-4px);
+        }
+        
+        .card-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--color-primary);
+        }
+        
+        .card h3 {
+            margin-bottom: 12px;
+        }
+        
+        .card a {
+            display: inline-block;
+            margin-top: 16px;
+            color: var(--color-primary);
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        .card a:hover {
+            text-decoration: underline;
+        }
+        
+        /* === USP BOXES === */
+        .usp-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+        
+        .usp-icon {
+            font-size: 32px;
+            color: var(--color-secondary);
+            flex-shrink: 0;
+        }
+        
+        .usp-content h3 {
+            margin-bottom: 8px;
+        }
+        
+        /* === STATS === */
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--color-secondary);
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+        }
+        
+        /* === FOOTER === */
+        footer {
+            background: var(--color-dark);
+            color: white;
+            padding: 60px 20px 20px;
+        }
+        
+        footer h3 {
+            color: var(--color-secondary);
+            margin-bottom: 20px;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        footer ul {
+            list-style: none;
+        }
+        
+        footer li {
+            margin-bottom: 8px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #999;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">Geiger & Cizek</a>
+            <ul>
+                <li><a href="#leistungen">Leistungen</a></li>
+                <li><a href="#ueber-uns">Über uns</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Wir schaffen Wärme, die bleibt – heute und in Zukunft</h1>
+            <p>Ihr zuverlässiger Partner für Heizung, Sanitär und Klimatechnik in Straubing und Umgebung.</p>
+            <a href="#kontakt" class="btn-primary">Jetzt Beratung vereinbaren</a>
+        </div>
+    </section>
+
+    <!-- Wer wir sind -->
+    <section class="section-white">
+        <div class="container">
+            <div class="section-title">
+                <h2>Zwei Meister. Ein Team. Ihre Zukunft.</h2>
+            </div>
+            <p style="max-width: 800px; margin: 0 auto; text-align: center;">
+                Mit Karl Geiger und Florian Cizek haben Sie es mit zwei erfahrenen Meistern im Bereich Heizung, Lüftung und Sanitär zu tun. Unterstützt von einem motivierten, hochqualifizierten Team sorgen wir für Lösungen, die überzeugen – in Straubing, Landshut, München, Passau und Umgebung.
+            </p>
+            <p style="max-width: 800px; margin: 24px auto 0; text-align: center;">
+                Unser Anspruch: Beratung mit System. Wir hören zu, planen mit Ihnen und setzen professionell um – sauber, effizient und transparent.
+            </p>
+        </div>
+    </section>
+
+    <!-- Leistungen -->
+    <section id="leistungen" class="section-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Alles aus einer Hand – von der Heizung bis zur Klimaanlage</h2>
+            </div>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-icon">🔥</div>
+                    <h3>Heizungsbau</h3>
+                    <p>Moderne Heizsysteme für Straubing, Regensburg, Deggendorf und Bogen – von der Wärmepumpe bis zur klassischen Gasheizung.</p>
+                    <a href="heizungsbau.html">Mehr erfahren →</a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🌱</div>
+                    <h3>Wärmepumpe</h3>
+                    <p>Effizient heizen und kühlen mit umweltfreundlicher Technologie – für Ihr Zuhause oder Büro.</p>
+                    <a href="#">Mehr erfahren →</a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🔥</div>
+                    <h3>Kaminöfen</h3>
+                    <p>Pellet- oder Scheitholz-Kaminöfen in vielen Ausführungen – Wärme, die Sie spüren und sehen.</p>
+                    <a href="kaminoefen.html">Mehr erfahren →</a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🚿</div>
+                    <h3>Badsanierung</h3>
+                    <p>Vom ersten Entwurf bis zur fertigen Wohlfühloase – alles aus einer Hand.</p>
+                    <a href="badsanierung.html">Mehr erfahren →</a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">💨</div>
+                    <h3>Lüftung & Wasser</h3>
+                    <p>Frische Luft und sauberes Wasser – moderne Lüftungsanlagen und Wasseraufbereitung.</p>
+                    <a href="#">Mehr erfahren →</a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">❄️</div>
+                    <h3>Klimaanlagen</h3>
+                    <p>Split- und Multisplit-Klimaanlagen für perfektes Raumklima – energieeffizient und leise.</p>
+                    <a href="klimaanlage.html">Mehr erfahren →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- USPs -->
+    <section class="section-white">
+        <div class="container">
+            <div class="section-title">
+                <h2>Warum Geiger & Cizek?</h2>
+            </div>
+            <div class="grid grid-2">
+                <div class="usp-box">
+                    <div class="usp-icon">✓</div>
+                    <div class="usp-content">
+                        <h3>Meisterbetrieb mit Erfahrung</h3>
+                        <p>Zwei erfahrene Meister mit über 15 Jahren Know-how – Sie profitieren von echter Handwerkskunst.</p>
+                    </div>
+                </div>
+                
+                <div class="usp-box">
+                    <div class="usp-icon">✓</div>
+                    <div class="usp-content">
+                        <h3>Alles aus einer Hand</h3>
+                        <p>Von der Beratung über die Planung bis zur Installation und Wartung – wir begleiten Sie durchgehend.</p>
+                    </div>
+                </div>
+                
+                <div class="usp-box">
+                    <div class="usp-icon">✓</div>
+                    <div class="usp-content">
+                        <h3>Regional verwurzelt</h3>
+                        <p>Straubing, Landshut, München, Passau – wir sind vor Ort und kennen die Region.</p>
+                    </div>
+                </div>
+                
+                <div class="usp-box">
+                    <div class="usp-icon">✓</div>
+                    <div class="usp-content">
+                        <h3>10 Jahre Funktionsgarantie</h3>
+                        <p>Maximale Sicherheit für Ihre Heizungsanlage – ohne versteckte Kosten.</p>
+                    </div>
+                </div>
+                
+                <div class="usp-box">
+                    <div class="usp-icon">✓</div>
+                    <div class="usp-content">
+                        <h3>Saubere Arbeit</h3>
+                        <p>Nach uns bleibt kein Staub, nur gute Luft – wir achten auf Ordnung und Sauberkeit.</p>
+                    </div>
+                </div>
+                
+                <div class="usp-box">
+                    <div class="usp-icon">✓</div>
+                    <div class="usp-content">
+                        <h3>Transparente Kosten</h3>
+                        <p>Klare Angebote ohne böse Überraschungen – Sie wissen immer, woran Sie sind.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section-dark">
+        <div class="container">
+            <div class="grid grid-4">
+                <div class="stat">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Jahre Erfahrung</div>
+                    <p style="font-size: 14px; margin-top: 8px;">Seit 2010 Ihr zuverlässiger Partner für Heizung, Sanitär und Klimatechnik.</p>
+                </div>
+                
+                <div class="stat">
+                    <div class="stat-number">1.200+</div>
+                    <div class="stat-label">Zufriedene Kunden</div>
+                    <p style="font-size: 14px; margin-top: 8px;">Ihre Zufriedenheit ist unser Maßstab – in Straubing und Umgebung.</p>
+                </div>
+                
+                <div class="stat">
+                    <div class="stat-number">48h</div>
+                    <div class="stat-label">Reaktionszeit</div>
+                    <p style="font-size: 14px; margin-top: 8px;">Ihre Anfrage ist unser Anliegen – wir antworten in maximal zwei Tagen.</p>
+                </div>
+                
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Transparenz</div>
+                    <p style="font-size: 14px; margin-top: 8px;">Klare Angebote, ehrliche Kommunikation, keine versteckten Kosten.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="kontakt" class="section-primary">
+        <div class="container" style="text-align: center;">
+            <h2>Bereit für Ihr nächstes Projekt?</h2>
+            <p style="font-size: 18px; margin-bottom: 32px;">
+                Egal ob Heizungsbau, Kaminöfen oder eine komplette Badsanierung – wir finden stets die beste Lösung für Ihre Immobilie.
+            </p>
+            <a href="tel:+4994218610588" class="btn-secondary" style="margin-right: 16px;">09421 / 861 05 88</a>
+            <a href="#" class="btn-secondary">Zum Kontaktformular</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="grid grid-3">
+                <div>
+                    <h3>Kontakt</h3>
+                    <p>
+                        Geiger & Cizek<br>
+                        Arndt-Sallinger-Str. 5<br>
+                        94315 Straubing
+                    </p>
+                    <p>
+                        Tel: <a href="tel:+4994218610588">09421 / 861 05 88</a><br>
+                        Mobil: <a href="tel:+49160948770 67">0160 / 948 770 67</a><br>
+                        E-Mail: <a href="mailto:info@hs-straubing.de">info@hs-straubing.de</a>
+                    </p>
+                </div>
+                
+                <div>
+                    <h3>Leistungen</h3>
+                    <ul>
+                        <li><a href="heizungsbau.html">Heizungsbau</a></li>
+                        <li><a href="#">Wärmepumpe</a></li>
+                        <li><a href="kaminoefen.html">Kaminöfen</a></li>
+                        <li><a href="badsanierung.html">Badsanierung</a></li>
+                        <li><a href="klimaanlage.html">Klimaanlage</a></li>
+                        <li><a href="#">Lüftung & Wasser</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Rechtliches</h3>
+                    <ul>
+                        <li><a href="#">Impressum</a></li>
+                        <li><a href="#">Datenschutz</a></li>
+                        <li><a href="#">Cookie-Richtlinie</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Geiger & Cizek – Alle Rechte vorbehalten</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
